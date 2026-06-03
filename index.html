@@ -1,0 +1,2076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ============================================================
+       PAGE TITLE — Change this to your family's name or a custom title
+       ============================================================ -->
+  <title>Our Journey Together — A Year of Faith & Fellowship</title>
+
+  <!-- Google Fonts: Cormorant Garamond (headings) + Jost (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES — DESIGN TOKENS
+       ============================================================ */
+    :root {
+      --cream:          #FAF7F2;
+      --cream-deep:     #F0EBE1;
+      --parchment:      #E8DFD0;
+      --amber-light:    #D4A96A;
+      --amber:          #B8843A;
+      --amber-dark:     #8C5E20;
+      --green-forest:   #2D4A35;
+      --green-deep:     #1E3326;
+      --green-sage:     #4A6B52;
+      --green-mist:     #C8D9C4;
+      --slate:          #3C3C3C;
+      --slate-mid:      #5A5A5A;
+      --slate-light:    #7A7A7A;
+      --gold-rule:      #C9A96E;
+      --white:          #FFFFFF;
+
+      --font-serif:     'Cormorant Garamond', Georgia, serif;
+      --font-sans:      'Jost', sans-serif;
+
+      --section-pad:    clamp(4rem, 8vw, 7rem) clamp(1.5rem, 6vw, 5rem);
+      --radius-card:    16px;
+      --radius-sm:      8px;
+      --transition:     0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    /* ============================================================
+       RESET & BASE
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--cream);
+      color: var(--slate);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* ============================================================
+       SCROLL FADE-IN ANIMATIONS
+       ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.10s; }
+    .reveal-delay-2 { transition-delay: 0.20s; }
+    .reveal-delay-3 { transition-delay: 0.30s; }
+    .reveal-delay-4 { transition-delay: 0.40s; }
+    .reveal-delay-5 { transition-delay: 0.50s; }
+
+    /* ============================================================
+       DECORATIVE DIVIDER
+       ============================================================ */
+    .section-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 0 auto 3rem;
+      max-width: 280px;
+    }
+    .section-divider::before,
+    .section-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--gold-rule);
+      opacity: 0.6;
+    }
+    .section-divider span {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--amber);
+      line-height: 1;
+    }
+
+    /* ============================================================
+       SECTION LABEL
+       ============================================================ */
+    .section-label {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 0.75rem;
+    }
+
+    /* ============================================================
+       NAV BAR
+       ============================================================ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1rem clamp(1.5rem, 5vw, 4rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background var(--transition), box-shadow var(--transition);
+    }
+    nav.scrolled {
+      background: rgba(250, 247, 242, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 rgba(180, 140, 80, 0.15);
+    }
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: var(--green-forest);
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--slate-mid);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    .nav-links a:hover { color: var(--amber); }
+
+    /* Hamburger */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+      padding: 4px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--green-forest);
+      transition: var(--transition);
+    }
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(250, 247, 242, 0.97);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--green-forest);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    .nav-mobile a:hover { color: var(--amber); }
+    .nav-mobile-close {
+      position: absolute;
+      top: 1.5rem; right: 1.5rem;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--slate);
+    }
+
+    @media (max-width: 680px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+    }
+
+    /* ============================================================
+       HERO SECTION
+       ============================================================ */
+    #hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: clamp(5rem, 10vw, 8rem) clamp(1.5rem, 6vw, 5rem) 6rem;
+      overflow: hidden;
+
+      /* ============================================================
+         HERO BACKGROUND — To add a background image, replace the
+         gradient below with:
+         background: linear-gradient(rgba(250,247,242,0.82), rgba(240,235,225,0.88)),
+                     url('YOUR-IMAGE-URL.jpg') center / cover no-repeat;
+         ============================================================ */
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(45, 74, 53, 0.08) 0%, transparent 70%),
+        linear-gradient(160deg, #FAF7F2 0%, #F0EBE1 40%, #E8DFD0 100%);
+    }
+
+    /* Decorative concentric rings */
+    .hero-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(180, 140, 80, 0.12);
+      pointer-events: none;
+    }
+    .hero-ring:nth-child(1) { width: 500px;  height: 500px;  top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    .hero-ring:nth-child(2) { width: 750px;  height: 750px;  top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    .hero-ring:nth-child(3) { width: 1050px; height: 1050px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+    /* Decorative eyebrow mark */
+    .hero-mark {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 1s ease 0.3s forwards;
+    }
+    .hero-mark::before,
+    .hero-mark::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--amber-light);
+    }
+    .hero-mark-text {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--amber);
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--green-deep);
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeUp 1s ease 0.5s forwards;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--amber-dark);
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-serif);
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--green-sage);
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 1s ease 0.7s forwards;
+    }
+
+    .hero-rule {
+      width: 60px;
+      height: 1px;
+      background: var(--gold-rule);
+      margin: 0 auto 2rem;
+      opacity: 0;
+      animation: fadeUp 1s ease 0.85s forwards;
+    }
+
+    .hero-para {
+      max-width: 560px;
+      font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+      font-weight: 300;
+      color: var(--slate-mid);
+      line-height: 1.85;
+      opacity: 0;
+      animation: fadeUp 1s ease 1s forwards;
+    }
+
+    /* Floating scroll hint */
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      text-decoration: none;
+      opacity: 0;
+      animation: fadeUp 1s ease 1.3s forwards;
+    }
+    .hero-scroll-text {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amber-light);
+    }
+    .hero-scroll-arrow {
+      width: 28px;
+      height: 28px;
+      border: 1px solid var(--amber-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: bounce 2.4s ease infinite;
+    }
+    .hero-scroll-arrow svg {
+      width: 12px;
+      height: 12px;
+      stroke: var(--amber);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(6px); }
+    }
+
+    /* ============================================================
+       SHARED SECTION STYLES
+       ============================================================ */
+    section {
+      padding: var(--section-pad);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 300;
+      color: var(--green-deep);
+      line-height: 1.15;
+    }
+    .section-title em {
+      font-style: italic;
+      color: var(--amber-dark);
+    }
+    .section-intro {
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: var(--slate-light);
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 300;
+    }
+
+    /* ============================================================
+       PROFILES SECTION
+       ============================================================ */
+    #profiles {
+      background: var(--white);
+    }
+
+    .profiles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.75rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .profile-card {
+      background: var(--cream);
+      border: 1px solid rgba(180, 140, 80, 0.15);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+      cursor: default;
+    }
+    .profile-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 48px rgba(45, 74, 53, 0.1);
+    }
+
+    /* ============================================================
+       PROFILE PHOTO AREA
+       To add a real photo, either:
+       1. Replace the entire .profile-photo div contents with:
+          <img src="YOUR-URL.jpg" alt="Person Name"
+               style="width:100%;height:100%;object-fit:cover;display:block;" />
+       2. Or set background-image: url('YOUR-URL.jpg') on the
+          .profile-photo element and remove the placeholder inside.
+       ============================================================ */
+    .profile-photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: linear-gradient(135deg, var(--green-mist) 0%, var(--parchment) 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .profile-photo-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0.45;
+    }
+    .profile-photo-placeholder svg {
+      width: 44px;
+      height: 44px;
+      stroke: var(--green-forest);
+      fill: none;
+      stroke-width: 1.2;
+    }
+    .profile-photo-placeholder span {
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green-forest);
+      font-weight: 500;
+    }
+
+    /* Role pill overlaid on photo */
+    .profile-tag {
+      position: absolute;
+      bottom: 0.75rem;
+      left: 0.75rem;
+      background: rgba(250, 247, 242, 0.9);
+      border: 1px solid rgba(180, 140, 80, 0.3);
+      border-radius: 100px;
+      padding: 0.25rem 0.7rem;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--amber-dark);
+    }
+
+    .profile-body {
+      padding: 1.25rem 1.25rem 1.5rem;
+    }
+    .profile-name {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--green-deep);
+      margin-bottom: 0.6rem;
+    }
+    .profile-desc {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--slate-mid);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+
+    /* Scripture / birthday badge */
+    .profile-badge {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      background: var(--white);
+      border: 1px solid rgba(180, 140, 80, 0.2);
+      border-radius: var(--radius-sm);
+      padding: 0.65rem 0.85rem;
+    }
+    .profile-badge-icon {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      flex-shrink: 0;
+    }
+    .profile-badge-label {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 0.2rem;
+    }
+    .profile-badge-text {
+      font-family: var(--font-serif);
+      font-size: 0.92rem;
+      font-style: italic;
+      color: var(--slate);
+      line-height: 1.5;
+    }
+
+    /* ============================================================
+       TIMELINE SECTION
+       ============================================================ */
+    #timeline {
+      background: var(--cream-deep);
+      position: relative;
+    }
+
+    .timeline-container {
+      max-width: 780px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* Vertical spine line */
+    .timeline-spine {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, var(--gold-rule) 8%, var(--gold-rule) 92%, transparent);
+      transform: translateX(-50%);
+    }
+
+    /* Each row: left-content | node | right-content */
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 1fr 48px 1fr;
+      align-items: start;
+      margin-bottom: 4rem;
+      position: relative;
+    }
+    .timeline-item:last-child { margin-bottom: 0; }
+
+    /* Odd items: photo on left, text on right */
+    .timeline-item:nth-child(odd)  .tl-left  { order: 1; text-align: right; }
+    .timeline-item:nth-child(odd)  .tl-node  { order: 2; }
+    .timeline-item:nth-child(odd)  .tl-right { order: 3; text-align: left; }
+
+    /* Even items: text on left, photo on right */
+    .timeline-item:nth-child(even) .tl-left  { order: 1; text-align: right; }
+    .timeline-item:nth-child(even) .tl-node  { order: 2; }
+    .timeline-item:nth-child(even) .tl-right { order: 3; text-align: left; }
+
+    .tl-node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 0.5rem;
+      z-index: 2;
+      position: relative;
+    }
+    .tl-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--amber);
+      border: 3px solid var(--cream-deep);
+      box-shadow: 0 0 0 1px var(--amber-light);
+      flex-shrink: 0;
+    }
+
+    .tl-left  { padding-right: 1.75rem; }
+    .tl-right { padding-left: 1.75rem; }
+
+    .tl-date {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--amber);
+      background: rgba(180, 140, 80, 0.1);
+      border: 1px solid rgba(180, 140, 80, 0.25);
+      border-radius: 100px;
+      padding: 0.25rem 0.75rem;
+      margin-bottom: 0.65rem;
+    }
+    .tl-headline {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--green-deep);
+      margin-bottom: 0.5rem;
+      line-height: 1.25;
+    }
+    .tl-text {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--slate-mid);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    /* ============================================================
+       TIMELINE PHOTO THUMBNAIL
+       To add a real photo:
+         1. Set background-image: url('YOUR-PHOTO-URL.jpg');
+            background-size: cover; background-position: center;
+            on the .tl-photo div.
+         2. Remove the .tl-photo-placeholder div inside it.
+       ============================================================ */
+    .tl-photo {
+      width: 100%;
+      max-width: 220px;
+      aspect-ratio: 4 / 3;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, var(--green-mist) 0%, var(--parchment) 100%);
+      border: 1px solid rgba(180, 140, 80, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      /* For right-aligned photos on odd items: */
+    }
+    .tl-left .tl-photo  { margin-left: auto; }
+    .tl-right .tl-photo { margin-right: auto; }
+
+    .tl-photo-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      opacity: 0.4;
+    }
+    .tl-photo-placeholder svg {
+      width: 28px;
+      height: 28px;
+      stroke: var(--green-forest);
+      fill: none;
+      stroke-width: 1.3;
+    }
+    .tl-photo-placeholder span {
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green-forest);
+    }
+
+    /* Mobile: single-column timeline */
+    @media (max-width: 680px) {
+      .timeline-spine { left: 16px; }
+      .timeline-item {
+        grid-template-columns: 32px 1fr;
+        gap: 0;
+      }
+      /* Hide the "empty" column on mobile */
+      .timeline-item:nth-child(odd)  .tl-left,
+      .timeline-item:nth-child(even) .tl-left { display: none; }
+
+      .timeline-item:nth-child(odd)  .tl-right,
+      .timeline-item:nth-child(even) .tl-right {
+        order: 3;
+        text-align: left;
+        padding-left: 1.25rem;
+        padding-right: 0;
+        grid-column: 2;
+      }
+      .tl-node { order: 1; padding-top: 0.35rem; }
+      .tl-photo { max-width: 100%; }
+    }
+
+    /* ============================================================
+       GRATITUDE WALL SECTION
+       ============================================================ */
+    #gratitude {
+      background: var(--green-forest);
+      position: relative;
+      overflow: hidden;
+    }
+    #gratitude::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 15% 20%, rgba(201, 169, 110, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 85% 80%, rgba(200, 217, 196, 0.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    #gratitude .section-label       { color: var(--amber-light); }
+    #gratitude .section-title       { color: var(--cream); }
+    #gratitude .section-title em    { color: var(--amber-light); }
+    #gratitude .section-intro       { color: rgba(250, 247, 242, 0.6); }
+    #gratitude .section-divider span { color: var(--amber-light); }
+    #gratitude .section-divider::before,
+    #gratitude .section-divider::after { background: var(--amber-light); opacity: 0.3; }
+
+    .gratitude-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .gratitude-card {
+      background: rgba(250, 247, 242, 0.06);
+      border: 1px solid rgba(201, 169, 110, 0.2);
+      border-radius: var(--radius-card);
+      padding: 1.75rem;
+      transition: background var(--transition), border-color var(--transition), transform var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .gratitude-card:hover {
+      background: rgba(250, 247, 242, 0.1);
+      border-color: rgba(201, 169, 110, 0.45);
+      transform: translateY(-4px);
+    }
+    /* Featured card spans 2 columns on desktop */
+    .gratitude-card.featured {
+      grid-column: span 2;
+      background: rgba(201, 169, 110, 0.12);
+      border-color: rgba(201, 169, 110, 0.35);
+    }
+    @media (max-width: 600px) {
+      .gratitude-card.featured { grid-column: span 1; }
+    }
+
+    .gratitude-card-type {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+    .gratitude-card-type-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(201, 169, 110, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .gratitude-card-type-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--amber-light);
+    }
+    .gratitude-card-quote-mark {
+      font-family: var(--font-serif);
+      font-size: 3.5rem;
+      line-height: 0.6;
+      color: var(--amber-light);
+      opacity: 0.35;
+      margin-bottom: 0.5rem;
+    }
+    .gratitude-card-text {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+    .gratitude-card.featured .gratitude-card-text {
+      font-size: 1.25rem;
+    }
+    .gratitude-card-author {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(250, 247, 242, 0.5);
+    }
+    .gratitude-card-author strong {
+      color: var(--amber-light);
+      font-weight: 500;
+    }
+
+    /* Corner tag */
+    .gratitude-tag {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: rgba(201, 169, 110, 0.18);
+      border: 1px solid rgba(201, 169, 110, 0.3);
+      border-radius: 100px;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--amber-light);
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    footer {
+      background: var(--green-deep);
+      padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 6vw, 5rem);
+      text-align: center;
+    }
+    .footer-mark {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--cream-deep);
+      margin-bottom: 1rem;
+      opacity: 0.85;
+    }
+    .footer-verse {
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: rgba(230, 220, 200, 0.5);
+      letter-spacing: 0.08em;
+      margin-bottom: 2.5rem;
+    }
+    .footer-rule {
+      width: 40px;
+      height: 1px;
+      background: var(--gold-rule);
+      margin: 0 auto 2rem;
+      opacity: 0.4;
+    }
+    .footer-credit {
+      font-size: 0.72rem;
+      color: rgba(230, 220, 200, 0.3);
+      letter-spacing: 0.08em;
+    }
+
+    /* ============================================================
+       ACCESSIBILITY UTILITY
+       ============================================================ */
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATION BAR
+       ============================================================ -->
+  <nav id="main-nav" role="navigation" aria-label="Site navigation">
+    <!-- ====== NAV LOGO — Change the text as desired ====== -->
+    <a class="nav-logo" href="#hero">Our Journey</a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#profiles">The Family</a></li>
+      <li><a href="#timeline">Our Story</a></li>
+      <li><a href="#gratitude">Gratitude</a></li>
+    </ul>
+
+    <!-- Hamburger button (visible on mobile only) -->
+    <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" id="nav-toggle">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Full-screen mobile menu overlay -->
+  <div class="nav-mobile" id="nav-mobile" role="dialog" aria-modal="true" aria-label="Navigation">
+    <button class="nav-mobile-close" id="nav-mobile-close" aria-label="Close navigation menu">&#x2715;</button>
+    <a href="#profiles" class="nav-mobile-link">The Family</a>
+    <a href="#timeline" class="nav-mobile-link">Our Story</a>
+    <a href="#gratitude" class="nav-mobile-link">Gratitude</a>
+  </div>
+
+
+  <!-- ================================================================
+       SECTION 1 — HERO (Welcome Cover)
+       ================================================================ -->
+  <section id="hero" aria-labelledby="hero-title">
+    <!-- Decorative concentric rings (purely visual) -->
+    <div class="hero-ring" aria-hidden="true"></div>
+    <div class="hero-ring" aria-hidden="true"></div>
+    <div class="hero-ring" aria-hidden="true"></div>
+
+    <!-- ====== EYEBROW LINE — Edit year / season here ====== -->
+    <div class="hero-mark" aria-hidden="true">
+      <span class="hero-mark-text">A Year of Grace &middot; 2025/26</span>
+    </div>
+
+    <!-- ====== MAIN TITLE — Edit the two heading lines below ====== -->
+    <h1 class="hero-title" id="hero-title">
+      Faith, Family,<br />&amp;&nbsp;<em>Fellowship</em>
+    </h1>
+
+    <!-- ====== SUBTITLE — Edit this line ====== -->
+    <p class="hero-subtitle">A season of growing together in love and grace</p>
+
+    <div class="hero-rule" aria-hidden="true"></div>
+
+    <!-- ====== OPENING REFLECTION — Replace this paragraph with your own words ====== -->
+    <p class="hero-para">
+      This memory book is a quiet celebration of the moments, meals, prayers, and laughter 
+      that we have Shared together this year. What began as a simple Saturday introduction grew 
+      into something beautiful &mdash; a bond we are forever grateful for. May these pages 
+      remind us of how faithfully God brings the right people into our lives at exactly the 
+      right time.
+    </p>
+
+    <!-- Floating scroll prompt -->
+    <a class="hero-scroll" href="#profiles" aria-label="Scroll down to meet the family">
+      <span class="hero-scroll-text">Scroll</span>
+      <span class="hero-scroll-arrow" aria-hidden="true">
+        <svg viewBox="0 0 12 12">
+          <polyline points="2,4 6,8 10,4" />
+        </svg>
+      </span>
+    </a>
+  </section>
+
+
+  <!-- ================================================================
+       SECTION 2 — FAMILY PROFILES
+       ================================================================ -->
+  <section id="profiles" aria-labelledby="profiles-title">
+    <div class="section-header">
+      <span class="section-label reveal">The Family</span>
+      <div class="section-divider reveal reveal-delay-1" aria-hidden="true"><span>&#x2726;</span></div>
+      <!-- ====== PROFILES TITLE — Edit as needed ====== -->
+      <h2 class="section-title reveal reveal-delay-2" id="profiles-title">
+        Hearts We&rsquo;ve <em>Come to Love</em>
+      </h2>
+      <!-- ====== PROFILES INTRO ====== -->
+      <p class="section-intro reveal reveal-delay-3">
+        Every family carries its own light. Here are the beautiful souls who have blessed 
+        our lives this year.
+      </p>
+    </div>
+
+    <div class="profiles-grid">
+
+      <!-- ============================================================
+           PROFILE CARD 1
+           HOW TO ADD A PHOTO:
+             Option A — Replace the .profile-photo-placeholder div with:
+               <img src="https://YOUR-IMAGE-URL.jpg" alt="Amara Johnson"
+                    style="width:100%;height:100%;object-fit:cover;" />
+             Option B — Add to the .profile-photo div:
+               style="background-image:url('https://YOUR-IMAGE-URL.jpg');
+                      background-size:cover;background-position:center;"
+             Then delete the .profile-photo-placeholder div.
+           ============================================================ -->
+      <div class="profile-card reveal reveal-delay-1">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO — see instructions above ====== -->
+         <div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780330996/mom_ohhclg.jpg" alt=""
+     style="width:100%;height:100%;object-fit:cover;" />
+  <span class="profile-tag"></span>
+</div>
+
+          <!-- ====== ROLE TAG — Change "Mom" to the person's role ====== -->
+          <span class="profile-tag">Mom</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Lidu</h3>
+          <!-- ====== MINI DESCRIPTION — Edit this paragraph ====== -->
+          <p class="profile-desc">
+            A woman of deep faith and even deeper warmth. keeps our extended family tightly knit, and ensures that anyone who steps through our front door instantly feels like home.
+          </p>
+          <!-- ====== BADGE — Change label + text ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
+            <div>
+              <span class="profile-badge-label">Birthday</span>
+              <span class="profile-badge-text">&ldquo;  January 29 &mdash; She is clothed in strength and dignity.&rdquo; &mdash; Prov. 31:25</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           PROFILE CARD 1 — Duplicate and edit for each family member
+           ============================================================ -->
+      <div class="profile-card reveal reveal-delay-2">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+        
+<div class="profile-photo">
+  <div class="profile-photo">
+  <img src="https://i.ibb.co/tpGvzq1Q/dad.jpg" alt="Dani"
+     style="width:100%;height:100%;object-fit:cover;" />
+  <span class="profile-tag">Mom</span>
+</div>
+</div>
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">Dad</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Dani</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+            A quiet leader with a generous spirit. He leads his family with humility and 
+            has been a steady anchor through every season of this year.
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
+            <div>
+              <span class="profile-badge-label">Birthday</span>
+              <span class="profile-badge-text">July 21 &mdash; The Lord alone led him; no foreign god was with him.&ldquo;&rdquo; Deuteronomy. 32:12</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- ============================================================
+           PROFILE CARD 1
+           ============================================================ -->
+<div class="profile-card reveal reveal-delay-5">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+          <div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780331003/kenawak_qt09lp.jpg" alt="Kenu"
+     style="width:100%;height:100%;object-fit:cover;" />
+  <span class="profile-tag">Mom</span>
+</div>
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">The Councilor</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Kenu</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+           The family’s resident therapist and voice of reason. Blessed with infinite patience and unmatched listening skills.
+           she's the ultimate peacemaker whenever a disagreement breaks out.
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
+            <div>
+              <span class="profile-badge-label">Birthday</span>
+              <span class="profile-badge-text">September 20th &mdash; Consider him who endured such opposition from sinners, so that you will not grow weary and lose heart&mdash; Hebrewa 12:3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           PROFILE CARD 2
+           ============================================================ -->
+      <div class="profile-card reveal reveal-delay-3">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+          
+<div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780307898/abeni_k6roen.jpg" alt="Abeni"
+     style="width:100%;height:100%;object-fit:cover;object-position:top;" />
+  <span class="profile-tag">Big bro</span>
+</div>
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">Big bro</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Abeni</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+            Thoughtful beyond his years, with a heart for serving others.
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
+            <div>
+              <span class="profile-badge-label">Birthday</span>
+              <span class="profile-badge-text">August 19th &mdash;Though he slay me, yet will I hope in him; I will surely defend my ways to his face.&ldquo;&rdquo; &mdash; Job 13:15</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           PROFILE CARD 3
+           ============================================================ -->
+      <div class="profile-card reveal reveal-delay-4">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+          
+<div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780340256/redu_kljrpc.jpg" alt=""
+     style="width:100%;height:100%;object-fit:cover;" />
+  <span class="profile-tag"></span>
+</div>
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">Big sis</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Redu</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+            Creative, joyful, and full of wonder. Redu sees the world in color and has 
+            a gift for making everyone around her feel seen and celebrated.
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
+            <div>
+              <span class="profile-badge-label">Birthday</span>
+              <span class="profile-badge-text">&ldquo; August 3rd &mdash; "For to us a child is born, to us a son is given; and the government shall be upon his shoulder, and his name shall be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace."&rdquo; &mdash; Isaiah 9:6</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           PROFILE CARD 4 — ADD or REMOVE cards as needed
+           ============================================================ -->
+      <div class="profile-card reveal reveal-delay-5">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+          
+<div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780308994/dagi_medh8d.jpg" alt="Dagi"
+     style="width:100%;height:100%;object-fit:cover;" />
+  <span class="profile-tag">The chaos agent</span>
+</div>
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">The Chaos Agent</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Dagi</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+            The light of the family. Dagi&rsquo;s curiosity and infectious giggle have brought 
+            more joy to our family dinners than anything else this year.
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
+            <div>
+              <span class="profile-badge-label">Birthday</span>
+              <span class="profile-badge-text">October 2nd &mdash; I can do all this through him who gives me strength &mdash; Phil. 4:13 </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- ============================================================
+           PROFILE CARD 5 — ADD or REMOVE cards as needed
+           ============================================================ -->
+<div class="profile-card reveal reveal-delay-5">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+         
+<div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780307898/me_vpu1yp.jpg" alt="SAV"
+     style="width:100%;height:100%;object-fit:cover;" />
+  <span class="profile-tag"></span>
+</div>
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">The Nerd</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">SAV</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+           A man of immense wisdom, great humor, and a hairline that is currently staging a tactical retreat.
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
+            <div>
+              <span class="profile-badge-label">Birthday</span>
+              <span class="profile-badge-text"> December 7th &mdash;"Above all else, guard your heart, for everything you do flows from it."&mdash; Proverbs 4:23 </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           PROFILE CARD 6  — ADD or REMOVE cards as needed
+           ============================================================ -->
+<div class="profile-card reveal reveal-delay-5">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+          <div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780331116/isru_u604sb.jpg" alt=""
+     style="width:100%;height:100%;object-fit:cover;" />
+  <span class="profile-tag"></span>
+</div>
+
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">The Warmth of the family</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Isru</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+           The warmth of the family who somehow runs the entire house.
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
+            <div>
+              <span class="profile-badge-label">Birthday</span>
+              <span class="profile-badge-text"> September  23rd &mdash;"by the God of your father who will help you, by the Almighty who will bless you with blessings of heaven above, blessings of the deep that crouches beneath, blessings of the breasts and of the womb."&mdash; Genesis 49:25 </span>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- ============================================================
+           PROFILE CARD 7 — ADD or REMOVE cards as needed
+           ============================================================ -->
+
+<div class="profile-card reveal reveal-delay-5">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+          
+<div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780404873/yise_m1npvs.jpg" alt=""
+     style="width:100%;height:100%;object-fit:cover;" />
+  <span class="profile-tag"></span>
+</div>
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">The Singer</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Yishak</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+          The family’s resident worship leader who fills our Gathering with praise.
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
+            <div>
+              <span class="profile-badge-label">Birthday</span>
+              <span class="profile-badge-text"> May  28th &mdash;Therefore, there is now no condemnation for those who are in Christ Jesus &mdash; Roman 8:1 </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- ============================================================
+           PROFILE CARD 8 — ADD or REMOVE cards as needed
+           ============================================================ -->
+
+<div class="profile-card reveal reveal-delay-5">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+          <div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780330997/yidu_ymcdbl.jpg" alt=""
+     style="width:100%;height:100%;object-fit:cover;object-position:top;" />
+  <span class="profile-tag"></span>
+</div>
+
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">Director or The Gov</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Yidu</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+          The creative architect behind our favorite memories, Yidu turned everyday campus hangouts into a true home-away-from-home.
+           Working tirelessly behind the scenes,poured her heart into organizing the events.
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
+            <div>
+              <span class="profile-badge-label">Birthday</span>
+              <span class="profile-badge-text"> August  14th &mdash;"For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life." &mdash;John 3:16  </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- ============================================================
+           PROFILE CARD 9 — ADD or REMOVE cards as needed
+           ============================================================ -->
+
+<div class="profile-card reveal reveal-delay-5">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+          <div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780307898/caleb_og3cbv.jpg" alt=""
+     style="width:100%;height:100%;object-fit:cover;" />
+  <span class="profile-tag"></span>
+</div>
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">The troublesome brother</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Caleb</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+          No caption he's betam Aschegari :).
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
+            <div>
+              <span class="profile-badge-label">Birthday</span>
+              <span class="profile-badge-text"> November  4th &mdash;"Pray without ceasing." &mdash; 1 Thessalonians 5:17   </span>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- ============================================================
+           PROFILE CARD 10 — ADD or REMOVE cards as needed
+           ============================================================ -->
+
+<div class="profile-card reveal reveal-delay-5">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+          
+<div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780307943/yabu_zalllb.jpg" alt=""
+     style="width:100%;height:100%;object-fit:cover;" />
+  <span class="profile-tag"></span>
+</div>
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">The on time girl</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Yabu</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+           She's always there on Time and the Archnemesis of Isru And SAV :).
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
+            <div>
+              <span class="profile-badge-label">Birthday</span>
+              <span class="profile-badge-text"> December  23rd &mdash; "For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life." &mdash; John 3:16 </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ============================================================
+           PROFILE CARD 11 — ADD or REMOVE cards as needed
+           ============================================================ -->
+
+<div class="profile-card reveal reveal-delay-5">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+         
+<div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780308993/abrish_ykoyhm.jpg" alt=""
+     style="width:100%;height:100%;object-fit:cover;" />
+  <span class="profile-tag"></span>
+</div>
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">The Bible Sage</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Abrish</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+           The family’s resident sage and anchor of faith.Our BS time is continuously blessed because of his deep knowledge of the word.
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
+            <div>
+              <span class="profile-badge-label">Birthday</span>
+              <span class="profile-badge-text"> October  12th &mdash;Greater love has no one than this: to lay down one’s life for one’s friends.
+                Jhon 15:13   </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ============================================================
+           PROFILE CARD 12 — ADD or REMOVE cards as needed
+           ============================================================ -->
+      
+<div class="profile-card reveal reveal-delay-5">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+          
+<div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780332543/sam_okklks.jpg" alt=""
+     style="width:100%;height:100%;object-fit:cover;" />
+  <span class="profile-tag"></span>
+</div>
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">Prayer Warrior</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Sami</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+          A steadfast pillar of our prayer team, Sami carried our family with a shepherding heart and unwavering faith.
+           
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
+            <div>
+              <span class="profile-badge-label">Birthday</span>
+              <span class="profile-badge-text"> December  13th &mdash;"Cast all your anxiety on him because he cares for you." &mdash; 1 Peter 5:7   </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div class="profile-card reveal reveal-delay-5">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+          
+<div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780332011/betisha_yhfclx.jpg" alt=""
+     style="width:100%;height:100%;object-fit:cover;object-position:top;" />
+  <span class="profile-tag"></span>
+</div>
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">Another Bible Sage</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Betisha</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+          A faithful guide in scripture, Betisha helped open our eyes to the depth of God’s Word with wisdom and grace.
+           
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
+            <div>
+              <span class="profile-badge-label">Birthday</span>
+              <span class="profile-badge-text"> September  27th &mdash; "The Lord is near to the brokenhearted and saves the crushed in spirit." &mdash; Psalm 34:18   </span>
+            </div>
+          </div>
+        </div>
+      </div>
+ <!-- ============================================================
+           PROFILE CARD 13 — ADD or REMOVE cards as needed
+           ============================================================ -->
+
+<div class="profile-card reveal reveal-delay-5">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+          
+<div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780307918/kira_d49zyo.jpg" alt=""
+     style="width:100%;height:100%;object-fit:cover;" />
+  <span class="profile-tag"></span>
+</div>
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">The inncocent guy</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Kira</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+          our Brother in Christ, he doesn't talk too much and too little. very decent guy.
+           
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
+            <div>
+              <span class="profile-badge-label">Birthday</span>
+              <span class="profile-badge-text"> September  20th &mdash;"Whatever you do, work heartily, as for the Lord and not for men." &mdash; Colossians 3:23  </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ============================================================
+           PROFILE CARD 14 — ADD or REMOVE cards as needed
+           ============================================================ -->
+
+<div class="profile-card reveal reveal-delay-5">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+         <div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780330997/berkume_tmidlh.jpg" alt=""
+     style="width:100%;height:100%;object-fit:cover;object-position:top;" />
+  <span class="profile-tag"></span>
+</div>
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">Our Short-Season Blessing</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Berkume</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+          Though her time with us was brief, Berkume was there at the very foundation of our team.
+           We will always cherish the early spark she brought and the potential of what we began together.
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
+            <div>
+              <span class="profile-badge-label">Birthday</span>
+              <span class="profile-badge-text"> September  11th &mdash; "Jesus Christ is the same yesterday and today and forever." &mdash; Hebrews 13:8    </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!--profile for tame, eba, and moti-->
+      
+      
+<div class="profile-card reveal reveal-delay-5">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+          <div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780330997/moti_ylcuhb.jpg" alt=""
+     style="width:100%;height:100%;object-fit:cover;object-position:top;" />
+  <span class="profile-tag"></span>
+</div>
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">Beloved son</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Moti</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+          
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F4D6;</span>
+            <div>
+              <span class="profile-badge-label">Favorite Scripture</span>
+              <span class="profile-badge-text"> "The Lord is my shepherd; I shall not want." &mdash; Psalm 23:1  </span>
+            </div>
+          </div>
+        </div>
+      </div>
+<!--profile 16====-->
+
+<div class="profile-card reveal reveal-delay-5">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+         <div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780331001/eba_b7aitb.jpg" alt=""
+      style="width:100%;height:100%;object-fit:cover;object-position:top;" />
+  <span class="profile-tag"></span>
+</div>
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">Beloved son</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Eba</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+          
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F4D6;</span>
+            <div>
+              <span class="profile-badge-label">favorite scripture</span>
+              <span class="profile-badge-text"> "When I am afraid, I put my trust in you." &mdash; Psalm 56:3   </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--profile 17-->
+
+<div class="profile-card reveal reveal-delay-5">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+          <div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780331001/tame_rdmoib.jpg" alt=""
+     style="width:100%;height:100%;object-fit:cover;" />
+  <span class="profile-tag"></span>
+</div>
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">Beloved son</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Tame</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+          
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F4D6;</span>
+            <div>
+              <span class="profile-badge-label">Favorite Scripture</span>
+              <span class="profile-badge-text">"The Lord is my light and my salvation; whom shall I fear?" &mdash; Psalm 27:1   </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--the last profile-->
+      <div class="profile-card reveal reveal-delay-5">
+        <div class="profile-photo">
+          <!-- ====== REPLACE WITH PHOTO ====== -->
+          <div class="profile-photo">
+  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780332017/asibegn_pvpzug.jpg" alt=""
+     style="width:100%;height:100%;object-fit:cover;object-position:top;" />
+  <span class="profile-tag"></span>
+</div>
+          <!-- ====== ROLE TAG ====== -->
+          <span class="profile-tag">Beloved son</span>
+        </div>
+        <div class="profile-body">
+          <!-- ====== NAME ====== -->
+          <h3 class="profile-name">Asibegn</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="profile-desc">
+          
+          </p>
+          <!-- ====== BADGE ====== -->
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F4D6;</span>
+            <div>
+              <span class="profile-badge-label">Favorite scripture</span>
+              <span class="profile-badge-text">"We love because he first loved us." &mdash;1 John 4:19   </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div><!-- /profiles-grid -->
+  </section>
+
+
+  <!-- ================================================================
+       SECTION 3 — INTERACTIVE TIMELINE
+       ================================================================ -->
+  <section id="timeline" aria-labelledby="timeline-title">
+    <div class="section-header">
+      <span class="section-label reveal">Our Story</span>
+      <div class="section-divider reveal reveal-delay-1" aria-hidden="true"><span>&#x2726;</span></div>
+      <!-- ====== TIMELINE TITLE — Edit as needed ====== -->
+      <h2 class="section-title reveal reveal-delay-2" id="timeline-title">
+        Moments That <em>Marked Us</em>
+      </h2>
+      <!-- ====== TIMELINE INTRO ====== -->
+      <p class="section-intro reveal reveal-delay-3">
+        A year told through the milestones and memories that brought us closer with 
+        every passing month.
+      </p>
+    </div>
+
+    <div class="timeline-container" role="list">
+      <!-- Decorative vertical spine -->
+      <div class="timeline-spine" aria-hidden="true"></div>
+
+      <!-- ============================================================
+           TIMELINE ITEM 1
+           HOW TO ADD A PHOTO to .tl-photo:
+             Add style="background-image:url('YOUR-PHOTO-URL.jpg');
+                        background-size:cover;background-position:center;"
+             to the .tl-photo div, then delete the .tl-photo-placeholder.
+           ============================================================ -->
+      <div class="timeline-item reveal" role="listitem">
+
+        <!-- Left cell: photo -->
+        <div class="tl-left">
+          <!-- ====== TIMELINE PHOTO — replace background-image with your URL ====== -->
+          <div class="tl-photo"
+     style="background-image:url('https://res.cloudinary.com/dknulflaz/image/upload/v1780308995/first_meetup_lizoln.jpg');
+            background-size:cover;
+            background-position:center;">
+</div>
+        </div>
+
+        <!-- Centre node -->
+        <div class="tl-node" aria-hidden="true"><div class="tl-dot"></div></div>
+
+        <!-- Right cell: text -->
+        <div class="tl-right">
+          <!-- ====== DATE ====== -->
+          <span class="tl-date">October 2025</span>
+          <!-- ====== HEADLINE ====== -->
+          <h3 class="tl-headline">First Family meetup</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="tl-text">
+           There was an exciting nervous energy in the room. we all look around the circle realizing
+           we're gonna spend the next 4 or 5 years together.
+          </p>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           TIMELINE ITEM 2
+           ============================================================ -->
+      <div class="timeline-item reveal reveal-delay-1" role="listitem">
+
+        <!-- Left cell: photo -->
+        <div class="tl-left">
+          <div class="tl-photo"
+               style="background-image:url('https://res.cloudinary.com/dknulflaz/image/upload/v1780308994/first_dinner_fccl23.jpg');
+                      background-size:cover;
+                      background-position:center;
+                      margin-left:auto;">
+          </div>
+        </div>
+
+        <!-- Centre node -->
+        <div class="tl-node" aria-hidden="true"><div class="tl-dot"></div></div>
+
+        <!-- Right cell: text -->
+        <div class="tl-right">
+          <span class="tl-date">October 2025</span>
+          <h3 class="tl-headline">The first Family dinner</h3>
+          <p class="tl-text">
+            The table was full of laughter, good food, and the unmistakable feeling that this was the beginning of something God-ordained.
+          </p>
+        </div>
+      </div>
+      </div>
+
+      <!-- ============================================================
+           TIMELINE ITEM 3
+           ============================================================ -->
+      <div class="timeline-item reveal reveal-delay-2" role="listitem">
+
+        <!-- Left cell: photo -->
+        <div class="tl-left">
+          <!-- ====== TIMELINE PHOTO ====== -->
+          <div class="tl-photo"
+     style="background-image:url('https://res.cloudinary.com/dknulflaz/image/upload/v1780308993/mini_mission_cnn5mo.jpg');
+            background-size:cover;
+            background-position:center;">
+</div>
+        </div>
+
+        <!-- Centre node -->
+        <div class="tl-node" aria-hidden="true"><div class="tl-dot"></div></div>
+
+        <!-- Right cell: text -->
+        <div class="tl-right">
+          <!-- ====== DATE ====== -->
+          <span class="tl-date">November 2025</span>
+          <!-- ====== HEADLINE ====== -->
+          <h3 class="tl-headline">Our first mini-mission</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="tl-text">
+            We bundled up, sang off-key, and served together at the church&rsquo;s 
+            outreach. We were only 3 :)
+        
+          </p>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           TIMELINE ITEM 4
+           ============================================================ -->
+      <div class="timeline-item reveal reveal-delay-3" role="listitem">
+
+        <!-- Left cell: photo -->
+        <div class="tl-left">
+          <div class="tl-photo"
+               style="background-image:url('https://res.cloudinary.com/dknulflaz/image/upload/v1780309000/second_semester_meetup_w8iaga.jpg');
+                      background-size:cover;
+                      background-position:center;
+                      margin-left:auto;">
+          </div>
+        </div>
+
+        <!-- Centre node -->
+        <div class="tl-node" aria-hidden="true"><div class="tl-dot"></div></div>
+
+        <!-- Right cell: text -->
+        <div class="tl-right">
+          <span class="tl-date">March 2026</span>
+          <h3 class="tl-headline">The first Dinner of Second semester</h3>
+          <p class="tl-text">
+            After getting back from semester break this was our first dinner.
+          </p>
+        </div>
+      </div>
+      </div>
+
+      <!-- ============================================================
+           TIMELINE ITEM 5
+           ============================================================ -->
+      <div class="timeline-item reveal reveal-delay-4" role="listitem">
+
+        <!-- Left cell: photo -->
+        <div class="tl-left">
+          <!-- ====== TIMELINE PHOTO ====== -->
+          <div class="tl-photo"
+     style="background-image:url('https://res.cloudinary.com/dknulflaz/image/upload/v1780308998/goodbye_xconzm.jpg');
+            background-size:cover;
+            background-position:center;">
+</div>
+        </div>
+
+        <!-- Centre node -->
+        <div class="tl-node" aria-hidden="true"><div class="tl-dot"></div></div>
+
+        <!-- Right cell: text -->
+        <div class="tl-right">
+          <!-- ====== DATE ====== -->
+          <span class="tl-date">May 2026</span>
+          <!-- ====== HEADLINE ====== -->
+          <h3 class="tl-headline">Breakthrough Moments &amp; End-of-Year Celebration</h3>
+          <!-- ====== DESCRIPTION ====== -->
+          <p class="tl-text">
+            Looking back at all God moved in a single year: answered prayers, opened doors, 
+            and one family that became an extension of our own. We celebrated not just the 
+            milestones but the small, daily miracle of belonging to each other.
+          </p>
+        </div>
+      </div>
+
+    </div><!-- /timeline-container -->
+  </section>
+
+
+  <!-- ================================================================
+       SECTION 4 — GRATITUDE & PRAYER WALL
+       ================================================================ -->
+  <section id="gratitude" aria-labelledby="gratitude-title">
+    <div class="section-header">
+      <span class="section-label reveal">Gratitude &amp; Prayer</span>
+      <div class="section-divider reveal reveal-delay-1" aria-hidden="true"><span>&#x2726;</span></div>
+      <!-- ====== GRATITUDE TITLE ====== -->
+      <h2 class="section-title reveal reveal-delay-2" id="gratitude-title">
+        Words of <em>Blessing</em>
+      </h2>
+      <!-- ====== GRATITUDE INTRO ====== -->
+      <p class="section-intro reveal reveal-delay-3">
+        Prayers answered, promises held, and blessings spoken over this family &mdash; 
+        gathered here as a testament to God&rsquo;s faithfulness.
+      </p>
+    </div>
+
+    <div class="gratitude-grid">
+
+      <!-- ============================================================
+           GRATITUDE CARD 1 — FEATURED (spans 2 cols on desktop)
+           Edit the quote, author, and tag label.
+           ============================================================ -->
+      <div class="gratitude-card featured reveal">
+        <!-- ====== TOP-RIGHT TAG — Edit label ====== -->
+        <span class="gratitude-tag">Answered Prayer</span>
+        <div class="gratitude-card-type">
+          <div class="gratitude-card-type-icon" aria-hidden="true">&#x1F64F;</div>
+          <span class="gratitude-card-type-label">Testimony</span>
+        </div>
+        <div class="gratitude-card-quote-mark" aria-hidden="true">&ldquo;</div>
+        <!-- ====== QUOTE — Edit this text ====== -->
+        <p class="gratitude-card-text">
+          I saw God working in my life this year, and being part of this family was the best thing this year had to offer. Many prayers were answered, and many struggles were overcome. God gave us His grace without limit; it was a blessed year. And I'm happy to be part of this.
+        </p>
+        <!-- ====== AUTHOR ====== -->
+        <p class="gratitude-card-author">Written by <strong>Yabu</strong> &mdash; </p>
+      </div>
+
+      <!-- ============================================================
+           GRATITUDE CARD 2
+           ============================================================ -->
+      <div class="gratitude-card reveal reveal-delay-1">
+        <span class="gratitude-tag">Blessing</span>
+        <div class="gratitude-card-type">
+          <div class="gratitude-card-type-icon" aria-hidden="true">&#x2728;</div>
+          <span class="gratitude-card-type-label">Words of blessings to our mom and dad</span>
+        </div>
+        <div class="gratitude-card-quote-mark" aria-hidden="true">&ldquo;</div>
+        <!-- ====== QUOTE ====== -->
+        <p class="gratitude-card-text">
+          You opened your table, your laughter, and your lives to us before you knew 
+          us well. That kind of love is rare, and it has changed our family forever.
+        </p>
+        <!-- ====== AUTHOR ====== -->
+        <p class="gratitude-card-author">Shared from<strong> the Whole children</strong></p>
+      </div>
+
+      <!-- ============================================================
+           GRATITUDE CARD 3
+           ============================================================ -->
+      <div class="gratitude-card reveal reveal-delay-2">
+        <span class="gratitude-tag">Shared Goal</span>
+        <div class="gratitude-card-type">
+          <div class="gratitude-card-type-icon" aria-hidden="true">&#x1F331;</div>
+          <span class="gratitude-card-type-label">Vision for Next Year</span>
+        </div>
+        <div class="gratitude-card-quote-mark" aria-hidden="true">&ldquo;</div>
+        <!-- ====== QUOTE ====== -->
+        <p class="gratitude-card-text">
+          Together we will serve God more than we did this year.
+          We plant this goal here as a promise to each other and to God.
+        </p>
+        <!-- ====== AUTHOR ====== -->
+        <p class="gratitude-card-author"> Lidu's and dani's fam &mdash; <strong>june 2026</strong></p>
+      </div>
+
+      <!-- ============================================================
+           GRATITUDE CARD 4
+           ============================================================ -->
+      <div class="gratitude-card reveal reveal-delay-3">
+        <span class="gratitude-tag">Scripture</span>
+        <div class="gratitude-card-type">
+          <div class="gratitude-card-type-icon" aria-hidden="true">&#x1F4D6;</div>
+          <span class="gratitude-card-type-label">A Verse Over This Fellowship</span>
+        </div>
+        <div class="gratitude-card-quote-mark" aria-hidden="true">&ldquo;</div>
+        <!-- ====== QUOTE ====== -->
+        <p class="gratitude-card-text">
+          Two are better than one, because they have a good return for their labor: 
+          if either of them falls down, one can help the other up.
+        </p>
+        <!-- ====== AUTHOR ====== -->
+        <p class="gratitude-card-author">Ecclesiastes 4:9&ndash;10 &mdash; <strong>Our anchor verse</strong></p>
+      </div>
+
+    
+
+      <!-- ============================================================
+           GRATITUDE CARD 6 — Duplicate this block to add more cards
+           ============================================================ -->
+      <div class="gratitude-card reveal reveal-delay-5">
+        <span class="gratitude-tag">Gratitude</span>
+        <div class="gratitude-card-type">
+          <div class="gratitude-card-type-icon" aria-hidden="true">&#x1F49B;</div>
+          <span class="gratitude-card-type-label">From the Heart</span>
+        </div>
+        <div class="gratitude-card-quote-mark" aria-hidden="true">&ldquo;</div>
+        <!-- ====== QUOTE ====== -->
+        <p class="gratitude-card-text">
+          Thank you for being present in every season &mdash; for the texts, the calls, 
+          the prayers at midnight, and the joy on ordinary Sundays. You are family.
+        </p>
+        <!-- ====== AUTHOR ====== -->
+        <p class="gratitude-card-author"> From &mdash; <strong>The children</strong></p>
+      </div>
+
+    </div><!-- /gratitude-grid -->
+  </section>
+
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer>
+    <!-- ====== CLOSING QUOTE — Edit as desired ====== -->
+    <p class="footer-mark">&ldquo;Every good and perfect gift is from above.&rdquo;</p>
+
+    <!-- ====== VERSE REFERENCE & YEAR ====== -->
+    <p class="footer-verse">James 1:17 &nbsp;&middot;&nbsp; A Year of Faith &amp; Fellowship</p>
+
+    <div class="footer-rule" aria-hidden="true"></div>
+
+    <!-- ====== CREDIT LINE — Edit as desired ====== -->
+    <p class="footer-credit">
+      This memory book was lovingly crafted &mdash; 
+       by The family’s Nerd Yeab AKA SAV.
+    </p>
+  </footer>
+
+
+  <!-- ================================================================
+       JAVASCRIPT — Nav scroll behaviour + reveal animations + mobile menu
+       ================================================================ -->
+  <script>
+    /* ── Sticky nav: add .scrolled class after 40px scroll ── */
+    const mainNav = document.getElementById('main-nav');
+    window.addEventListener('scroll', function () {
+      mainNav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    /* ── Intersection Observer: fade-in on scroll for .reveal elements ── */
+    var revealElements = document.querySelectorAll('.reveal');
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealElements.forEach(function (el) {
+      revealObserver.observe(el);
+    });
+
+    /* ── Mobile navigation toggle ── */
+    var navToggle   = document.getElementById('nav-toggle');
+    var navMobile   = document.getElementById('nav-mobile');
+    var navClose    = document.getElementById('nav-mobile-close');
+    var mobileLinks = document.querySelectorAll('.nav-mobile-link');
+
+    function openMobileNav () {
+      navMobile.classList.add('open');
+      navToggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav () {
+      navMobile.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    navToggle.addEventListener('click', openMobileNav);
+    navClose.addEventListener('click', closeMobileNav);
+    mobileLinks.forEach(function (link) {
+      link.addEventListener('click', closeMobileNav);
+    });
+
+    /* Close mobile nav on Escape key */
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navMobile.classList.contains('open')) {
+        closeMobileNav();
+      }
+    });
+  </script>
+
+</body>
+</html>
