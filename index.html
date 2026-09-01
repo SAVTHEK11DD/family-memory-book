@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Embedded Favicon (Data URI) -->
+  <link rel="icon" type="image/png" href="data:image/png;base64,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" />
+  <link rel="apple-touch-icon" href="data:image/png;base64,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" />
+
   <!-- ============================================================
        PAGE TITLE — Change this to your family's name or a custom title
        ============================================================ -->
@@ -53,6 +58,35 @@
       font-size: 16px;
     }
 
+    /* Custom elegant scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--cream);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(184, 132, 58, 0.4);
+      border-radius: 10px;
+      border: 2px solid var(--cream);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--amber);
+    }
+
+    /* Reading scroll progress indicator */
+    #reading-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--amber-light), var(--amber), var(--gold-rule));
+      z-index: 1000;
+      transition: width 0.1s ease-out;
+      pointer-events: none;
+    }
+
     body {
       font-family: var(--font-sans);
       background-color: var(--cream);
@@ -65,6 +99,12 @@
       display: block;
       max-width: 100%;
       height: auto;
+    }
+
+    /* Focus visible accessibility */
+    :focus-visible {
+      outline: 2px solid var(--amber);
+      outline-offset: 3px;
     }
 
     /* ============================================================
@@ -131,42 +171,71 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
-      padding: 1rem clamp(1.5rem, 5vw, 4rem);
+      padding: 1.1rem clamp(1.5rem, 5vw, 4rem);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      transition: background var(--transition), box-shadow var(--transition);
+      transition: background var(--transition), box-shadow var(--transition), padding var(--transition);
     }
     nav.scrolled {
-      background: rgba(250, 247, 242, 0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 1px 0 rgba(180, 140, 80, 0.15);
+      background: rgba(250, 247, 242, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 4px 24px rgba(45, 74, 53, 0.08), 0 1px 0 rgba(180, 140, 80, 0.2);
+      padding-top: 0.8rem;
+      padding-bottom: 0.8rem;
     }
     .nav-logo {
       font-family: var(--font-serif);
-      font-size: 1.15rem;
-      font-weight: 400;
+      font-size: 1.25rem;
+      font-weight: 500;
       color: var(--green-forest);
       letter-spacing: 0.02em;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color var(--transition);
+    }
+    .nav-logo:hover {
+      color: var(--amber);
     }
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 2.2rem;
       list-style: none;
     }
     .nav-links a {
       font-family: var(--font-sans);
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 500;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--slate-mid);
       text-decoration: none;
+      position: relative;
+      padding: 0.35rem 0;
       transition: color var(--transition);
     }
-    .nav-links a:hover { color: var(--amber); }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--amber);
+      transition: width var(--transition);
+      border-radius: 2px;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--green-deep);
+    }
+    .nav-links a.active::after,
+    .nav-links a:hover::after {
+      width: 100%;
+    }
 
     /* Hamburger */
     .nav-toggle {
@@ -417,68 +486,209 @@
        ============================================================ */
     #profiles {
       background: var(--white);
+      position: relative;
+    }
+
+    /* Interactive Filter & Search Controls */
+    .profile-controls {
+      max-width: 900px;
+      margin: 0 auto 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .filter-chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .filter-chip {
+      background: var(--cream);
+      border: 1px solid rgba(180, 140, 80, 0.25);
+      border-radius: 100px;
+      padding: 0.45rem 1.1rem;
+      font-family: var(--font-sans);
+      font-size: 0.76rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--slate-mid);
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .filter-chip:hover {
+      border-color: var(--amber);
+      color: var(--amber-dark);
+      background: var(--cream-deep);
+    }
+    .filter-chip.active {
+      background: var(--green-forest);
+      color: var(--cream);
+      border-color: var(--green-forest);
+      box-shadow: 0 4px 14px rgba(45, 74, 53, 0.2);
+    }
+
+    .profile-search-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 380px;
+    }
+    .profile-search-wrap input {
+      width: 100%;
+      padding: 0.65rem 2.4rem 0.65rem 2.4rem;
+      border: 1px solid rgba(180, 140, 80, 0.25);
+      border-radius: 100px;
+      background: var(--cream);
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      color: var(--slate);
+      transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+    }
+    .profile-search-wrap input:focus {
+      outline: none;
+      background: var(--white);
+      border-color: var(--amber);
+      box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.25);
+    }
+    .profile-search-wrap input::placeholder {
+      color: var(--slate-light);
+      opacity: 0.8;
+    }
+    .profile-search-icon {
+      position: absolute;
+      left: 0.9rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.85rem;
+      color: var(--amber);
+      pointer-events: none;
+      opacity: 0.7;
+    }
+    .profile-search-clear {
+      position: absolute;
+      right: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--slate-light);
+      font-size: 0.9rem;
+      cursor: pointer;
+      padding: 4px;
+      line-height: 1;
+      display: none;
+    }
+    .profile-search-clear:hover {
+      color: var(--amber-dark);
+    }
+
+    .filter-count-badge {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--slate-light);
+      letter-spacing: 0.04em;
+      margin-bottom: 2rem;
+      min-height: 1.2rem;
+    }
+
+    /* Empty state */
+    .profiles-empty {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      background: var(--cream);
+      border-radius: var(--radius-card);
+      border: 1px dashed rgba(180, 140, 80, 0.4);
+      max-width: 500px;
+      margin: 2rem auto;
+      display: none;
+    }
+    .profiles-empty .empty-icon {
+      font-size: 2.2rem;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+    .profiles-empty h3 {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--green-deep);
+      margin-bottom: 0.4rem;
+    }
+    .profiles-empty p {
+      font-size: 0.85rem;
+      color: var(--slate-light);
+      margin-bottom: 1.2rem;
+    }
+    .btn-reset-filter {
+      background: var(--amber);
+      color: var(--white);
+      border: none;
+      border-radius: 100px;
+      padding: 0.4rem 1.2rem;
+      font-size: 0.76rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background var(--transition);
+    }
+    .btn-reset-filter:hover {
+      background: var(--amber-dark);
     }
 
     .profiles-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.75rem;
-      max-width: 1100px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.85rem;
+      max-width: 1120px;
       margin: 0 auto;
     }
 
     .profile-card {
       background: var(--cream);
-      border: 1px solid rgba(180, 140, 80, 0.15);
+      border: 1px solid rgba(180, 140, 80, 0.18);
       border-radius: var(--radius-card);
       overflow: hidden;
-      transition: transform var(--transition), box-shadow var(--transition);
-      cursor: default;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 18px rgba(45, 74, 53, 0.04);
     }
     .profile-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 48px rgba(45, 74, 53, 0.1);
+      transform: translateY(-7px);
+      border-color: rgba(184, 132, 58, 0.45);
+      box-shadow: 0 22px 50px rgba(45, 74, 53, 0.12), 0 0 0 1px rgba(201, 169, 110, 0.25);
     }
 
-    /* ============================================================
-       PROFILE PHOTO AREA
-       To add a real photo, either:
-       1. Replace the entire .profile-photo div contents with:
-          <img src="YOUR-URL.jpg" alt="Person Name"
-               style="width:100%;height:100%;object-fit:cover;display:block;" />
-       2. Or set background-image: url('YOUR-URL.jpg') on the
-          .profile-photo element and remove the placeholder inside.
-       ============================================================ */
+    /* Shimmer background while loading */
     .profile-photo {
       width: 100%;
       aspect-ratio: 1 / 1;
-      background: linear-gradient(135deg, var(--green-mist) 0%, var(--parchment) 100%);
+      background: linear-gradient(110deg, #ece5d8 8%, #f7f2ea 18%, #ece5d8 33%);
+      background-size: 200% 100%;
+      animation: shimmer 2s infinite linear;
       position: relative;
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    .profile-photo-placeholder {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      opacity: 0.45;
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
     }
-    .profile-photo-placeholder svg {
-      width: 44px;
-      height: 44px;
-      stroke: var(--green-forest);
-      fill: none;
-      stroke-width: 1.2;
+
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
-    .profile-photo-placeholder span {
-      font-size: 0.68rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--green-forest);
-      font-weight: 500;
+    .profile-card:hover .profile-photo img {
+      transform: scale(1.06);
     }
 
     /* Role pill overlaid on photo */
@@ -486,53 +696,92 @@
       position: absolute;
       bottom: 0.75rem;
       left: 0.75rem;
-      background: rgba(250, 247, 242, 0.9);
+      background: rgba(250, 247, 242, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       border: 1px solid rgba(180, 140, 80, 0.3);
       border-radius: 100px;
-      padding: 0.25rem 0.7rem;
+      padding: 0.25rem 0.75rem;
       font-size: 0.68rem;
       font-weight: 600;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--amber-dark);
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Subtle zoom indicator icon */
+    .profile-zoom-icon {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(250, 247, 242, 0.85);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      color: var(--green-deep);
+      font-size: 0.75rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .profile-card:hover .profile-zoom-icon {
+      opacity: 1;
+      transform: scale(1);
     }
 
     .profile-body {
-      padding: 1.25rem 1.25rem 1.5rem;
+      padding: 1.3rem 1.25rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
     }
     .profile-name {
       font-family: var(--font-serif);
-      font-size: 1.4rem;
+      font-size: 1.45rem;
       font-weight: 400;
       color: var(--green-deep);
       margin-bottom: 0.6rem;
+      letter-spacing: 0.01em;
     }
     .profile-desc {
       font-size: 0.88rem;
       font-weight: 300;
       color: var(--slate-mid);
       line-height: 1.75;
-      margin-bottom: 1rem;
+      margin-bottom: 1.1rem;
+      flex-grow: 1;
     }
 
     /* Scripture / birthday badge */
     .profile-badge {
       display: flex;
       align-items: flex-start;
-      gap: 0.6rem;
+      gap: 0.65rem;
       background: var(--white);
-      border: 1px solid rgba(180, 140, 80, 0.2);
+      border: 1px solid rgba(180, 140, 80, 0.22);
       border-radius: var(--radius-sm);
       padding: 0.65rem 0.85rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+      margin-top: auto;
     }
     .profile-badge-icon {
       font-size: 0.95rem;
-      line-height: 1.6;
+      line-height: 1.5;
       flex-shrink: 0;
     }
     .profile-badge-label {
       display: block;
-      font-size: 0.65rem;
+      font-size: 0.64rem;
       font-weight: 600;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -556,7 +805,7 @@
     }
 
     .timeline-container {
-      max-width: 780px;
+      max-width: 820px;
       margin: 0 auto;
       position: relative;
     }
@@ -567,7 +816,7 @@
       left: 50%;
       top: 0;
       bottom: 0;
-      width: 1px;
+      width: 2px;
       background: linear-gradient(to bottom, transparent, var(--gold-rule) 8%, var(--gold-rule) 92%, transparent);
       transform: translateX(-50%);
     }
@@ -577,7 +826,7 @@
       display: grid;
       grid-template-columns: 1fr 48px 1fr;
       align-items: start;
-      margin-bottom: 4rem;
+      margin-bottom: 4.5rem;
       position: relative;
     }
     .timeline-item:last-child { margin-bottom: 0; }
@@ -601,17 +850,31 @@
       position: relative;
     }
     .tl-dot {
-      width: 14px;
-      height: 14px;
+      width: 16px;
+      height: 16px;
       border-radius: 50%;
       background: var(--amber);
       border: 3px solid var(--cream-deep);
       box-shadow: 0 0 0 1px var(--amber-light);
       flex-shrink: 0;
+      position: relative;
+    }
+    .tl-dot::after {
+      content: '';
+      position: absolute;
+      inset: -5px;
+      border-radius: 50%;
+      border: 1.5px solid var(--amber-light);
+      opacity: 0.6;
+      animation: pulseDot 2.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.65); opacity: 0; }
     }
 
-    .tl-left  { padding-right: 1.75rem; }
-    .tl-right { padding-left: 1.75rem; }
+    .tl-left  { padding-right: 2rem; }
+    .tl-right { padding-left: 2rem; }
 
     .tl-date {
       display: inline-block;
@@ -619,73 +882,72 @@
       font-weight: 600;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--amber);
-      background: rgba(180, 140, 80, 0.1);
-      border: 1px solid rgba(180, 140, 80, 0.25);
+      color: var(--amber-dark);
+      background: rgba(184, 132, 58, 0.12);
+      border: 1px solid rgba(180, 140, 80, 0.3);
       border-radius: 100px;
-      padding: 0.25rem 0.75rem;
-      margin-bottom: 0.65rem;
+      padding: 0.28rem 0.85rem;
+      margin-bottom: 0.75rem;
     }
     .tl-headline {
       font-family: var(--font-serif);
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       font-weight: 400;
       color: var(--green-deep);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
       line-height: 1.25;
     }
     .tl-text {
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       font-weight: 300;
       color: var(--slate-mid);
-      line-height: 1.8;
+      line-height: 1.85;
       margin-bottom: 1rem;
     }
 
-    /* ============================================================
-       TIMELINE PHOTO THUMBNAIL
-       To add a real photo:
-         1. Set background-image: url('YOUR-PHOTO-URL.jpg');
-            background-size: cover; background-position: center;
-            on the .tl-photo div.
-         2. Remove the .tl-photo-placeholder div inside it.
-       ============================================================ */
+    /* TIMELINE PHOTO THUMBNAIL */
     .tl-photo {
       width: 100%;
-      max-width: 220px;
+      max-width: 240px;
       aspect-ratio: 4 / 3;
       border-radius: var(--radius-sm);
       background: linear-gradient(135deg, var(--green-mist) 0%, var(--parchment) 100%);
-      border: 1px solid rgba(180, 140, 80, 0.2);
+      border: 1px solid rgba(180, 140, 80, 0.25);
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      /* For right-aligned photos on odd items: */
+      cursor: pointer;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+      box-shadow: 0 4px 16px rgba(45, 74, 53, 0.08);
+      position: relative;
     }
+    .tl-photo:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 16px 36px rgba(45, 74, 53, 0.15);
+      border-color: var(--amber);
+    }
+    .tl-photo::after {
+      content: '🔍';
+      position: absolute;
+      bottom: 0.5rem;
+      right: 0.5rem;
+      font-size: 0.75rem;
+      background: rgba(250, 247, 242, 0.85);
+      padding: 0.2rem 0.4rem;
+      border-radius: 6px;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+    .tl-photo:hover::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+
     .tl-left .tl-photo  { margin-left: auto; }
     .tl-right .tl-photo { margin-right: auto; }
-
-    .tl-photo-placeholder {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.4rem;
-      opacity: 0.4;
-    }
-    .tl-photo-placeholder svg {
-      width: 28px;
-      height: 28px;
-      stroke: var(--green-forest);
-      fill: none;
-      stroke-width: 1.3;
-    }
-    .tl-photo-placeholder span {
-      font-size: 0.6rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--green-forest);
-    }
 
     /* Mobile: single-column timeline */
     @media (max-width: 680px) {
@@ -693,8 +955,8 @@
       .timeline-item {
         grid-template-columns: 32px 1fr;
         gap: 0;
+        margin-bottom: 3.5rem;
       }
-      /* Hide the "empty" column on mobile */
       .timeline-item:nth-child(odd)  .tl-left,
       .timeline-item:nth-child(even) .tl-left { display: none; }
 
@@ -707,7 +969,7 @@
         grid-column: 2;
       }
       .tl-node { order: 1; padding-top: 0.35rem; }
-      .tl-photo { max-width: 100%; }
+      .tl-photo { max-width: 100%; margin-top: 0.5rem; }
     }
 
     /* ============================================================
@@ -723,70 +985,103 @@
       position: absolute;
       inset: 0;
       background-image:
-        radial-gradient(circle at 15% 20%, rgba(201, 169, 110, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 85% 80%, rgba(200, 217, 196, 0.06) 0%, transparent 50%);
+        radial-gradient(circle at 15% 20%, rgba(201, 169, 110, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 85% 80%, rgba(200, 217, 196, 0.08) 0%, transparent 50%);
       pointer-events: none;
     }
     #gratitude .section-label       { color: var(--amber-light); }
     #gratitude .section-title       { color: var(--cream); }
     #gratitude .section-title em    { color: var(--amber-light); }
-    #gratitude .section-intro       { color: rgba(250, 247, 242, 0.6); }
+    #gratitude .section-intro       { color: rgba(250, 247, 242, 0.7); }
     #gratitude .section-divider span { color: var(--amber-light); }
     #gratitude .section-divider::before,
     #gratitude .section-divider::after { background: var(--amber-light); opacity: 0.3; }
 
+    /* Header action button for leaving a blessing */
+    .gratitude-header-action {
+      margin: 1.8rem auto 0;
+      text-align: center;
+    }
+    .btn-blessing {
+      background: rgba(201, 169, 110, 0.18);
+      color: var(--cream);
+      border: 1px solid rgba(201, 169, 110, 0.45);
+      border-radius: 100px;
+      padding: 0.65rem 1.6rem;
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: all var(--transition);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    }
+    .btn-blessing:hover {
+      background: var(--amber);
+      border-color: var(--amber-light);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
     .gratitude-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.75rem;
       max-width: 1100px;
       margin: 0 auto;
     }
 
     .gratitude-card {
-      background: rgba(250, 247, 242, 0.06);
-      border: 1px solid rgba(201, 169, 110, 0.2);
+      background: rgba(250, 247, 242, 0.07);
+      border: 1px solid rgba(201, 169, 110, 0.22);
       border-radius: var(--radius-card);
-      padding: 1.75rem;
-      transition: background var(--transition), border-color var(--transition), transform var(--transition);
+      padding: 1.85rem;
+      transition: background var(--transition), border-color var(--transition), transform var(--transition), box-shadow var(--transition);
       position: relative;
       overflow: hidden;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
     }
     .gratitude-card:hover {
-      background: rgba(250, 247, 242, 0.1);
-      border-color: rgba(201, 169, 110, 0.45);
-      transform: translateY(-4px);
+      background: rgba(250, 247, 242, 0.12);
+      border-color: rgba(201, 169, 110, 0.5);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
     }
     /* Featured card spans 2 columns on desktop */
     .gratitude-card.featured {
       grid-column: span 2;
-      background: rgba(201, 169, 110, 0.12);
-      border-color: rgba(201, 169, 110, 0.35);
+      background: rgba(201, 169, 110, 0.14);
+      border-color: rgba(201, 169, 110, 0.4);
     }
     @media (max-width: 600px) {
       .gratitude-card.featured { grid-column: span 1; }
     }
 
     .gratitude-card-type {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
-}
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      margin-top: 1.5rem;
+    }
     .gratitude-card-type-icon {
       width: 32px;
       height: 32px;
       border-radius: 50%;
-      background: rgba(201, 169, 110, 0.2);
+      background: rgba(201, 169, 110, 0.22);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       flex-shrink: 0;
     }
     .gratitude-card-type-label {
-      font-size: 0.65rem;
+      font-size: 0.66rem;
       font-weight: 600;
       letter-spacing: 0.14em;
       text-transform: uppercase;
@@ -797,30 +1092,48 @@
       font-size: 3.5rem;
       line-height: 0.6;
       color: var(--amber-light);
-      opacity: 0.35;
+      opacity: 0.4;
       margin-bottom: 0.5rem;
     }
     .gratitude-card-text {
       font-family: var(--font-serif);
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       font-style: italic;
       font-weight: 300;
       color: var(--cream);
-      line-height: 1.75;
-      margin-bottom: 1rem;
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
     }
     .gratitude-card.featured .gratitude-card-text {
-      font-size: 1.25rem;
+      font-size: 1.28rem;
     }
     .gratitude-card-author {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       font-weight: 500;
       letter-spacing: 0.06em;
-      color: rgba(250, 247, 242, 0.5);
+      color: rgba(250, 247, 242, 0.6);
     }
     .gratitude-card-author strong {
       color: var(--amber-light);
       font-weight: 500;
+    }
+
+    /* Delete button on user-added blessings */
+    .gratitude-delete-btn {
+      position: absolute;
+      bottom: 1.25rem;
+      right: 1.25rem;
+      background: none;
+      border: none;
+      color: rgba(250, 247, 242, 0.4);
+      font-size: 0.72rem;
+      cursor: pointer;
+      padding: 4px;
+      border-radius: 4px;
+      transition: color var(--transition);
+    }
+    .gratitude-delete-btn:hover {
+      color: #ff9b9b;
     }
 
     /* Corner tag */
@@ -828,15 +1141,345 @@
       position: absolute;
       top: 1.25rem;
       right: 1.25rem;
-      background: rgba(201, 169, 110, 0.18);
-      border: 1px solid rgba(201, 169, 110, 0.3);
+      background: rgba(201, 169, 110, 0.2);
+      border: 1px solid rgba(201, 169, 110, 0.35);
       border-radius: 100px;
-      padding: 0.2rem 0.6rem;
+      padding: 0.22rem 0.65rem;
       font-size: 0.62rem;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--amber-light);
+    }
+
+    /* ============================================================
+       EDITORIAL LIGHTBOX DIALOG
+       ============================================================ */
+    dialog.editorial-modal {
+      border: none;
+      border-radius: 20px;
+      padding: 0;
+      max-width: 860px;
+      width: 92vw;
+      background: var(--cream);
+      box-shadow: 0 30px 90px rgba(15, 30, 20, 0.45), 0 0 0 1px rgba(201, 169, 110, 0.3);
+      position: fixed;
+      inset: 0;
+      margin: auto;
+      overflow: hidden;
+      opacity: 0;
+      transform: scale(0.95) translateY(12px);
+      transition: opacity 0.35s ease, transform 0.35s ease, display 0.35s allow-discrete, overlay 0.35s allow-discrete;
+    }
+    dialog.editorial-modal[open] {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+    @starting-style {
+      dialog.editorial-modal[open] {
+        opacity: 0;
+        transform: scale(0.95) translateY(12px);
+      }
+    }
+    dialog.editorial-modal::backdrop {
+      background: rgba(18, 32, 23, 0.76);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      opacity: 0;
+      transition: opacity 0.35s ease, display 0.35s allow-discrete, overlay 0.35s allow-discrete;
+    }
+    dialog.editorial-modal[open]::backdrop {
+      opacity: 1;
+    }
+    @starting-style {
+      dialog.editorial-modal[open]::backdrop {
+        opacity: 0;
+      }
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(250, 247, 242, 0.9);
+      border: 1px solid rgba(180, 140, 80, 0.3);
+      color: var(--slate);
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: all var(--transition);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .modal-close-btn:hover {
+      background: var(--amber);
+      color: var(--white);
+      border-color: var(--amber-dark);
+      transform: rotate(90deg);
+    }
+
+    .modal-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 480px;
+    }
+    .modal-photo-col {
+      background: #1e3326;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .modal-photo-col img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .modal-info-col {
+      padding: clamp(2rem, 4vw, 3rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: var(--cream);
+      overflow-y: auto;
+      max-height: 80vh;
+    }
+    .modal-tag {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber-dark);
+      background: rgba(184, 132, 58, 0.12);
+      border: 1px solid rgba(180, 140, 80, 0.3);
+      border-radius: 100px;
+      padding: 0.25rem 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+    .modal-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 400;
+      color: var(--green-deep);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .modal-desc {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--slate-mid);
+      line-height: 1.8;
+      margin-bottom: 1.8rem;
+    }
+    .modal-badge {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      background: var(--white);
+      border: 1px solid rgba(180, 140, 80, 0.25);
+      border-radius: var(--radius-sm);
+      padding: 0.9rem 1.1rem;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    }
+    .modal-badge-icon {
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      line-height: 1.3;
+    }
+    .modal-badge-label {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 0.25rem;
+    }
+    .modal-badge-text {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--slate);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 720px) {
+      .modal-content-grid {
+        grid-template-columns: 1fr;
+      }
+      .modal-photo-col {
+        height: 280px;
+      }
+      .modal-info-col {
+        padding: 1.75rem;
+      }
+    }
+
+    /* ============================================================
+       BLESSING FORM DIALOG
+       ============================================================ */
+    dialog#blessing-modal {
+      border: none;
+      border-radius: 20px;
+      padding: 0;
+      max-width: 520px;
+      width: 90vw;
+      background: var(--cream);
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+      position: fixed;
+      inset: 0;
+      margin: auto;
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 0.3s ease, transform 0.3s ease, display 0.3s allow-discrete, overlay 0.3s allow-discrete;
+    }
+    dialog#blessing-modal[open] {
+      opacity: 1;
+      transform: scale(1);
+    }
+    @starting-style {
+      dialog#blessing-modal[open] {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+    }
+    dialog#blessing-modal::backdrop {
+      background: rgba(18, 32, 23, 0.75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .blessing-form-container {
+      padding: 2.2rem 2rem;
+      position: relative;
+    }
+    .blessing-form-container h3 {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: var(--green-deep);
+      margin-bottom: 0.3rem;
+    }
+    .blessing-form-container p {
+      font-size: 0.85rem;
+      color: var(--slate-mid);
+      margin-bottom: 1.5rem;
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--amber-dark);
+      margin-bottom: 0.4rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.65rem 0.9rem;
+      border: 1px solid rgba(180, 140, 80, 0.3);
+      border-radius: var(--radius-sm);
+      background: var(--white);
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      color: var(--slate);
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--amber);
+      box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.25);
+    }
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.75rem;
+      margin-top: 1.75rem;
+    }
+    .btn-cancel {
+      background: transparent;
+      border: 1px solid rgba(180, 140, 80, 0.3);
+      color: var(--slate-mid);
+      border-radius: 100px;
+      padding: 0.5rem 1.2rem;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .btn-cancel:hover {
+      background: rgba(0,0,0,0.05);
+    }
+    .btn-submit {
+      background: var(--green-forest);
+      border: none;
+      color: var(--cream);
+      border-radius: 100px;
+      padding: 0.5rem 1.4rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .btn-submit:hover {
+      background: var(--green-deep);
+      transform: translateY(-1px);
+    }
+
+    /* ============================================================
+       FLOATING BACK TO TOP BUTTON
+       ============================================================ */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(250, 247, 242, 0.95);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(180, 140, 80, 0.35);
+      color: var(--amber-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(45, 74, 53, 0.15);
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(12px);
+      transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+      z-index: 90;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    .back-to-top:hover {
+      background: var(--green-forest);
+      color: var(--cream);
+      border-color: var(--green-forest);
+      transform: translateY(-3px);
     }
 
     /* ============================================================
@@ -888,6 +1531,7 @@
 </head>
 
 <body>
+  <div id="reading-progress" aria-hidden="true"></div>
 
   <!-- ============================================================
        NAVIGATION BAR
@@ -980,709 +1624,732 @@
       </p>
     </div>
 
-    <div class="profiles-grid">
+    <!-- ============================================================
+         PROFILE FILTER & SEARCH TOOLBAR
+         ============================================================ -->
+    <div class="profile-controls reveal reveal-delay-3" role="toolbar" aria-label="Filter and search family members">
+      <div class="filter-chips" role="tablist" aria-label="Filter by family category">
+        <button type="button" class="filter-chip active" data-filter="all" role="tab" aria-selected="true">All (21)</button>
+        <button type="button" class="filter-chip" data-filter="parents" role="tab" aria-selected="false">Parents (3)</button>
+        <button type="button" class="filter-chip" data-filter="siblings" role="tab" aria-selected="false">Siblings (18)</button>
+      </div>
 
-      <!-- ============================================================
-           PROFILE CARD 1
-           HOW TO ADD A PHOTO:
-             Option A — Replace the .profile-photo-placeholder div with:
-               <img src="https://YOUR-IMAGE-URL.jpg" alt="Amara Johnson"
-                    style="width:100%;height:100%;object-fit:cover;" />
-             Option B — Add to the .profile-photo div:
-               style="background-image:url('https://YOUR-IMAGE-URL.jpg');
-                      background-size:cover;background-position:center;"
-             Then delete the .profile-photo-placeholder div.
-           ============================================================ -->
-      <div class="profile-card reveal reveal-delay-1">
+      <div class="profile-search-wrap">
+        <span class="profile-search-icon" aria-hidden="true">&#x1F50D;</span>
+        <input type="text" id="profile-search" placeholder="Search by name, role, or birthday..." aria-label="Search family members" autocomplete="off" />
+        <button type="button" id="profile-search-clear" class="profile-search-clear" aria-label="Clear search">&#x2715;</button>
+      </div>
+    </div>
+
+    <div id="filter-count" class="filter-count-badge" aria-live="polite">Showing all 21 family members</div>
+
+    <div id="profiles-empty" class="profiles-empty" role="status">
+      <span class="empty-icon" aria-hidden="true">&#x1F4DA;</span>
+      <h3>No family members found</h3>
+      <p>Try searching with a different name or reset your filter.</p>
+      <button type="button" id="btn-reset-filter" class="btn-reset-filter">Reset Filters</button>
+    </div>
+
+    <div class="profiles-grid" id="profiles-grid">
+
+      <!-- Profile 1: Lidu -->
+      <div class="profile-card reveal reveal-delay-1"
+           data-category="parents"
+           data-name="Lidu"
+           data-role="Mom"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780330996/mom_ohhclg.jpg"
+           data-desc="A woman of deep faith and even deeper warmth. Keeps our extended family tightly knit, and ensures that anyone who steps through our front door instantly feels like home."
+           data-badge-label="Birthday"
+           data-badge-icon="🎂"
+           data-badge-text="January 29 — “She is clothed in strength and dignity.” — Prov. 31:25"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Lidu">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO — see instructions above ====== -->
-         <div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780330996/mom_ohhclg.jpg" alt=""
-     style="width:100%;height:100%;object-fit:cover;" />
-  <span class="profile-tag"></span>
-</div>
-
-          <!-- ====== ROLE TAG — Change "Mom" to the person's role ====== -->
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780330996/mom_ohhclg.jpg" alt="Lidu" loading="lazy" />
           <span class="profile-tag">Mom</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
           <h3 class="profile-name">Lidu</h3>
-          <!-- ====== MINI DESCRIPTION — Edit this paragraph ====== -->
           <p class="profile-desc">
-            A woman of deep faith and even deeper warmth. keeps our extended family tightly knit, and ensures that anyone who steps through our front door instantly feels like home.
+            A woman of deep faith and even deeper warmth. Keeps our extended family tightly knit, and ensures that anyone who steps through our front door instantly feels like home.
           </p>
-          <!-- ====== BADGE — Change label + text ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
             <div>
               <span class="profile-badge-label">Birthday</span>
-              <span class="profile-badge-text">&ldquo;  January 29 &mdash; She is clothed in strength and dignity.&rdquo; &mdash; Prov. 31:25</span>
+              <span class="profile-badge-text">January 29 &mdash; &ldquo;She is clothed in strength and dignity.&rdquo; &mdash; Prov. 31:25</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- ============================================================
-           PROFILE CARD 1 — Duplicate and edit for each family member
-           ============================================================ -->
-      <div class="profile-card reveal reveal-delay-2">
+      <!-- Profile 2: Dani -->
+      <div class="profile-card reveal reveal-delay-2"
+           data-category="parents"
+           data-name="Dani"
+           data-role="Dad"
+           data-img="https://i.ibb.co/tpGvzq1Q/dad.jpg"
+           data-desc="A quiet leader with a generous spirit. He leads his family with humility and has been a steady anchor through every season of this year."
+           data-badge-label="Birthday"
+           data-badge-icon="🎂"
+           data-badge-text="July 21 — “The Lord alone led him; no foreign god was with him.” — Deut. 32:12"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Dani">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-        
-<div class="profile-photo">
-  <div class="profile-photo">
-  <img src="https://i.ibb.co/tpGvzq1Q/dad.jpg" alt="Dani"
-     style="width:100%;height:100%;object-fit:cover;" />
-  <span class="profile-tag">Mom</span>
-</div>
-</div>
-          <!-- ====== ROLE TAG ====== -->
+          <img src="https://i.ibb.co/tpGvzq1Q/dad.jpg" alt="Dani" loading="lazy" />
           <span class="profile-tag">Dad</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
           <h3 class="profile-name">Dani</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="profile-desc">
             A quiet leader with a generous spirit. He leads his family with humility and 
             has been a steady anchor through every season of this year.
           </p>
-          <!-- ====== BADGE ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
             <div>
               <span class="profile-badge-label">Birthday</span>
-              <span class="profile-badge-text">July 21 &mdash; The Lord alone led him; no foreign god was with him.&ldquo;&rdquo; Deuteronomy. 32:12</span>
+              <span class="profile-badge-text">July 21 &mdash; &ldquo;The Lord alone led him; no foreign god was with him.&rdquo; &mdash; Deut. 32:12</span>
             </div>
           </div>
         </div>
       </div>
 
-<!-- ============================================================
-           PROFILE CARD 1
-           ============================================================ -->
-<div class="profile-card reveal reveal-delay-5">
+      <!-- Profile 3: Kenu -->
+      <div class="profile-card reveal reveal-delay-3"
+           data-category="parents"
+           data-name="Kenu"
+           data-role="The Counselor"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780331003/kenawak_qt09lp.jpg"
+           data-desc="The family’s resident therapist and voice of reason. Blessed with infinite patience and unmatched listening skills, she's the ultimate peacemaker whenever a disagreement breaks out."
+           data-badge-label="Birthday"
+           data-badge-icon="🎂"
+           data-badge-text="September 20th — “Consider him who endured such opposition from sinners, so that you will not grow weary and lose heart.” — Hebrews 12:3"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Kenu">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-          <div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780331003/kenawak_qt09lp.jpg" alt="Kenu"
-     style="width:100%;height:100%;object-fit:cover;" />
-  <span class="profile-tag">Mom</span>
-</div>
-          <!-- ====== ROLE TAG ====== -->
-          <span class="profile-tag">The Councilor</span>
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780331003/kenawak_qt09lp.jpg" alt="Kenu" loading="lazy" />
+          <span class="profile-tag">The Counselor</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
           <h3 class="profile-name">Kenu</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="profile-desc">
-           The family’s resident therapist and voice of reason. Blessed with infinite patience and unmatched listening skills.
-           she's the ultimate peacemaker whenever a disagreement breaks out.
+            The family’s resident therapist and voice of reason. Blessed with infinite patience and unmatched listening skills,
+            she's the ultimate peacemaker whenever a disagreement breaks out.
           </p>
-          <!-- ====== BADGE ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
             <div>
               <span class="profile-badge-label">Birthday</span>
-              <span class="profile-badge-text">September 20th &mdash; Consider him who endured such opposition from sinners, so that you will not grow weary and lose heart&mdash; Hebrewa 12:3</span>
+              <span class="profile-badge-text">September 20th &mdash; &ldquo;Consider him who endured such opposition from sinners, so that you will not grow weary and lose heart.&rdquo; &mdash; Hebrews 12:3</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- ============================================================
-           PROFILE CARD 2
-           ============================================================ -->
-      <div class="profile-card reveal reveal-delay-3">
+      <!-- Profile 4: Abeni -->
+      <div class="profile-card reveal reveal-delay-3"
+           data-category="siblings"
+           data-name="Abeni"
+           data-role="Big bro"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780307898/abeni_k6roen.jpg"
+           data-desc="Thoughtful beyond his years, with a heart for serving others and carrying the family forward."
+           data-badge-label="Birthday"
+           data-badge-icon="🎂"
+           data-badge-text="August 19th — “Though he slay me, yet will I hope in him; I will surely defend my ways to his face.” — Job 13:15"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Abeni">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-          
-<div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780307898/abeni_k6roen.jpg" alt="Abeni"
-     style="width:100%;height:100%;object-fit:cover;object-position:top;" />
-  <span class="profile-tag">Big bro</span>
-</div>
-          <!-- ====== ROLE TAG ====== -->
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780307898/abeni_k6roen.jpg" alt="Abeni" style="object-position:top;" loading="lazy" />
           <span class="profile-tag">Big bro</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
           <h3 class="profile-name">Abeni</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="profile-desc">
-            Thoughtful beyond his years, with a heart for serving others.
+            Thoughtful beyond his years, with a heart for serving others and carrying the family forward.
           </p>
-          <!-- ====== BADGE ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
             <div>
               <span class="profile-badge-label">Birthday</span>
-              <span class="profile-badge-text">August 19th &mdash;Though he slay me, yet will I hope in him; I will surely defend my ways to his face.&ldquo;&rdquo; &mdash; Job 13:15</span>
+              <span class="profile-badge-text">August 19th &mdash; &ldquo;Though he slay me, yet will I hope in him; I will surely defend my ways to his face.&rdquo; &mdash; Job 13:15</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- ============================================================
-           PROFILE CARD 3
-           ============================================================ -->
-      <div class="profile-card reveal reveal-delay-4">
+      <!-- Profile 5: Redu -->
+      <div class="profile-card reveal reveal-delay-4"
+           data-category="siblings"
+           data-name="Redu"
+           data-role="Big sis"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780340256/redu_kljrpc.jpg"
+           data-desc="Creative, joyful, and full of wonder. Redu sees the world in color and has a gift for making everyone around her feel seen and celebrated."
+           data-badge-label="Birthday"
+           data-badge-icon="🎂"
+           data-badge-text="August 3rd — “For to us a child is born, to us a son is given; and the government shall be upon his shoulder...” — Isaiah 9:6"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Redu">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-          
-<div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780340256/redu_kljrpc.jpg" alt=""
-     style="width:100%;height:100%;object-fit:cover;" />
-  <span class="profile-tag"></span>
-</div>
-          <!-- ====== ROLE TAG ====== -->
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780340256/redu_kljrpc.jpg" alt="Redu" loading="lazy" />
           <span class="profile-tag">Big sis</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
           <h3 class="profile-name">Redu</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="profile-desc">
             Creative, joyful, and full of wonder. Redu sees the world in color and has 
             a gift for making everyone around her feel seen and celebrated.
           </p>
-          <!-- ====== BADGE ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
             <div>
               <span class="profile-badge-label">Birthday</span>
-              <span class="profile-badge-text">&ldquo; August 3rd &mdash; "For to us a child is born, to us a son is given; and the government shall be upon his shoulder, and his name shall be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace."&rdquo; &mdash; Isaiah 9:6</span>
+              <span class="profile-badge-text">August 3rd &mdash; &ldquo;For to us a child is born, to us a son is given; and the government shall be upon his shoulder, and his name shall be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace.&rdquo; &mdash; Isaiah 9:6</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- ============================================================
-           PROFILE CARD 4 — ADD or REMOVE cards as needed
-           ============================================================ -->
-      <div class="profile-card reveal reveal-delay-5">
+      <!-- Profile 6: Dagi -->
+      <div class="profile-card reveal reveal-delay-5"
+           data-category="siblings"
+           data-name="Dagi"
+           data-role="The Chaos Agent"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780308994/dagi_medh8d.jpg"
+           data-desc="The light of the family. Dagi’s curiosity and infectious giggle have brought more joy to our family dinners than anything else this year."
+           data-badge-label="Birthday"
+           data-badge-icon="🎂"
+           data-badge-text="October 2nd — “I can do all this through him who gives me strength.” — Phil. 4:13"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Dagi">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-          
-<div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780308994/dagi_medh8d.jpg" alt="Dagi"
-     style="width:100%;height:100%;object-fit:cover;" />
-  <span class="profile-tag">The chaos agent</span>
-</div>
-          <!-- ====== ROLE TAG ====== -->
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780308994/dagi_medh8d.jpg" alt="Dagi" loading="lazy" />
           <span class="profile-tag">The Chaos Agent</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
           <h3 class="profile-name">Dagi</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="profile-desc">
             The light of the family. Dagi&rsquo;s curiosity and infectious giggle have brought 
             more joy to our family dinners than anything else this year.
           </p>
-          <!-- ====== BADGE ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
             <div>
               <span class="profile-badge-label">Birthday</span>
-              <span class="profile-badge-text">October 2nd &mdash; I can do all this through him who gives me strength &mdash; Phil. 4:13 </span>
+              <span class="profile-badge-text">October 2nd &mdash; &ldquo;I can do all this through him who gives me strength.&rdquo; &mdash; Phil. 4:13</span>
             </div>
           </div>
         </div>
       </div>
 
-<!-- ============================================================
-           PROFILE CARD 5 — ADD or REMOVE cards as needed
-           ============================================================ -->
-<div class="profile-card reveal reveal-delay-5">
+      <!-- Profile 7: SAV -->
+      <div class="profile-card reveal reveal-delay-2"
+           data-category="siblings"
+           data-name="SAV"
+           data-role="The Nerd"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780307898/me_vpu1yp.jpg"
+           data-desc="A man of immense wisdom, great humor, and a hairline that is currently staging a tactical retreat."
+           data-badge-label="Birthday"
+           data-badge-icon="🎂"
+           data-badge-text="December 7th — “Above all else, guard your heart, for everything you do flows from it.” — Proverbs 4:23"
+           tabindex="0"
+           role="button"
+           aria-label="View details for SAV">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-         
-<div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780307898/me_vpu1yp.jpg" alt="SAV"
-     style="width:100%;height:100%;object-fit:cover;" />
-  <span class="profile-tag"></span>
-</div>
-          <!-- ====== ROLE TAG ====== -->
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780307898/me_vpu1yp.jpg" alt="SAV" loading="lazy" />
           <span class="profile-tag">The Nerd</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
           <h3 class="profile-name">SAV</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="profile-desc">
-           A man of immense wisdom, great humor, and a hairline that is currently staging a tactical retreat.
+            A man of immense wisdom, great humor, and a hairline that is currently staging a tactical retreat.
           </p>
-          <!-- ====== BADGE ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
             <div>
               <span class="profile-badge-label">Birthday</span>
-              <span class="profile-badge-text"> December 7th &mdash;"Above all else, guard your heart, for everything you do flows from it."&mdash; Proverbs 4:23 </span>
+              <span class="profile-badge-text">December 7th &mdash; &ldquo;Above all else, guard your heart, for everything you do flows from it.&rdquo; &mdash; Proverbs 4:23</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- ============================================================
-           PROFILE CARD 6  — ADD or REMOVE cards as needed
-           ============================================================ -->
-<div class="profile-card reveal reveal-delay-5">
+      <!-- Profile 8: Isru -->
+      <div class="profile-card reveal reveal-delay-3"
+           data-category="siblings"
+           data-name="Isru"
+           data-role="The Warmth"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780331116/isru_u604sb.jpg"
+           data-desc="The warmth of the family who somehow runs the entire house with effortless love and grace."
+           data-badge-label="Birthday"
+           data-badge-icon="🎂"
+           data-badge-text="September 23rd — “...by the God of your father who will help you, by the Almighty who will bless you...” — Genesis 49:25"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Isru">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-          <div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780331116/isru_u604sb.jpg" alt=""
-     style="width:100%;height:100%;object-fit:cover;" />
-  <span class="profile-tag"></span>
-</div>
-
-          <!-- ====== ROLE TAG ====== -->
-          <span class="profile-tag">The Warmth of the family</span>
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780331116/isru_u604sb.jpg" alt="Isru" loading="lazy" />
+          <span class="profile-tag">The Warmth</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
           <h3 class="profile-name">Isru</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="profile-desc">
-           The warmth of the family who somehow runs the entire house.
+            The warmth of the family who somehow runs the entire house with effortless love and grace.
           </p>
-          <!-- ====== BADGE ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
             <div>
               <span class="profile-badge-label">Birthday</span>
-              <span class="profile-badge-text"> September  23rd &mdash;"by the God of your father who will help you, by the Almighty who will bless you with blessings of heaven above, blessings of the deep that crouches beneath, blessings of the breasts and of the womb."&mdash; Genesis 49:25 </span>
+              <span class="profile-badge-text">September 23rd &mdash; &ldquo;...by the God of your father who will help you, by the Almighty who will bless you...&rdquo; &mdash; Genesis 49:25</span>
             </div>
           </div>
         </div>
       </div>
-<!-- ============================================================
-           PROFILE CARD 7 — ADD or REMOVE cards as needed
-           ============================================================ -->
 
-<div class="profile-card reveal reveal-delay-5">
+      <!-- Profile 9: Yishak -->
+      <div class="profile-card reveal reveal-delay-4"
+           data-category="siblings"
+           data-name="Yishak"
+           data-role="The Singer"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780404873/yise_m1npvs.jpg"
+           data-desc="The family’s resident worship leader who fills our gatherings with praise, worship, and heartfelt presence."
+           data-badge-label="Birthday"
+           data-badge-icon="🎂"
+           data-badge-text="May 28th — “Therefore, there is now no condemnation for those who are in Christ Jesus.” — Romans 8:1"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Yishak">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-          
-<div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780404873/yise_m1npvs.jpg" alt=""
-     style="width:100%;height:100%;object-fit:cover;" />
-  <span class="profile-tag"></span>
-</div>
-          <!-- ====== ROLE TAG ====== -->
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780404873/yise_m1npvs.jpg" alt="Yishak" loading="lazy" />
           <span class="profile-tag">The Singer</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
           <h3 class="profile-name">Yishak</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="profile-desc">
-          The family’s resident worship leader who fills our Gathering with praise.
+            The family’s resident worship leader who fills our gatherings with praise, worship, and heartfelt presence.
           </p>
-          <!-- ====== BADGE ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
             <div>
               <span class="profile-badge-label">Birthday</span>
-              <span class="profile-badge-text"> May  28th &mdash;Therefore, there is now no condemnation for those who are in Christ Jesus &mdash; Roman 8:1 </span>
+              <span class="profile-badge-text">May 28th &mdash; &ldquo;Therefore, there is now no condemnation for those who are in Christ Jesus.&rdquo; &mdash; Romans 8:1</span>
             </div>
           </div>
         </div>
       </div>
 
-<!-- ============================================================
-           PROFILE CARD 8 — ADD or REMOVE cards as needed
-           ============================================================ -->
-
-<div class="profile-card reveal reveal-delay-5">
+      <!-- Profile 10: Yidu -->
+      <div class="profile-card reveal reveal-delay-5"
+           data-category="siblings"
+           data-name="Yidu"
+           data-role="Director"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780330997/yidu_ymcdbl.jpg"
+           data-desc="The creative architect behind our favorite memories, Yidu turned everyday campus hangouts into a true home-away-from-home. Working tirelessly behind the scenes, poured her heart into organizing the events."
+           data-badge-label="Birthday"
+           data-badge-icon="🎂"
+           data-badge-text="August 14th — “For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life.” — John 3:16"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Yidu">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-          <div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780330997/yidu_ymcdbl.jpg" alt=""
-     style="width:100%;height:100%;object-fit:cover;object-position:top;" />
-  <span class="profile-tag"></span>
-</div>
-
-          <!-- ====== ROLE TAG ====== -->
-          <span class="profile-tag">Director or The Gov</span>
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780330997/yidu_ymcdbl.jpg" alt="Yidu" style="object-position:top;" loading="lazy" />
+          <span class="profile-tag">Director</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
           <h3 class="profile-name">Yidu</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="profile-desc">
-          The creative architect behind our favorite memories, Yidu turned everyday campus hangouts into a true home-away-from-home.
-           Working tirelessly behind the scenes,poured her heart into organizing the events.
+            The creative architect behind our favorite memories, Yidu turned everyday campus hangouts into a true home-away-from-home.
+            Working tirelessly behind the scenes, poured her heart into organizing the events.
           </p>
-          <!-- ====== BADGE ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
             <div>
               <span class="profile-badge-label">Birthday</span>
-              <span class="profile-badge-text"> August  14th &mdash;"For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life." &mdash;John 3:16  </span>
+              <span class="profile-badge-text">August 14th &mdash; &ldquo;For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life.&rdquo; &mdash; John 3:16</span>
             </div>
           </div>
         </div>
       </div>
 
-<!-- ============================================================
-           PROFILE CARD 9 — ADD or REMOVE cards as needed
-           ============================================================ -->
-
-<div class="profile-card reveal reveal-delay-5">
+      <!-- Profile 11: Caleb -->
+      <div class="profile-card reveal reveal-delay-2"
+           data-category="siblings"
+           data-name="Caleb"
+           data-role="The troublesome brother"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780307898/caleb_og3cbv.jpg"
+           data-desc="No caption he's betam Aschegari :) — full of life and always keeping things lively."
+           data-badge-label="Birthday"
+           data-badge-icon="🎂"
+           data-badge-text="November 4th — “Pray without ceasing.” — 1 Thessalonians 5:17"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Caleb">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-          <div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780307898/caleb_og3cbv.jpg" alt=""
-     style="width:100%;height:100%;object-fit:cover;" />
-  <span class="profile-tag"></span>
-</div>
-          <!-- ====== ROLE TAG ====== -->
-          <span class="profile-tag">The troublesome brother</span>
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780307898/caleb_og3cbv.jpg" alt="Caleb" loading="lazy" />
+          <span class="profile-tag">The Troublesome Bro</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
           <h3 class="profile-name">Caleb</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="profile-desc">
-          No caption he's betam Aschegari :).
+            No caption he's betam Aschegari :) &mdash; full of life and always keeping things lively.
           </p>
-          <!-- ====== BADGE ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
             <div>
               <span class="profile-badge-label">Birthday</span>
-              <span class="profile-badge-text"> November  4th &mdash;"Pray without ceasing." &mdash; 1 Thessalonians 5:17   </span>
+              <span class="profile-badge-text">November 4th &mdash; &ldquo;Pray without ceasing.&rdquo; &mdash; 1 Thessalonians 5:17</span>
             </div>
           </div>
         </div>
       </div>
-<!-- ============================================================
-           PROFILE CARD 10 — ADD or REMOVE cards as needed
-           ============================================================ -->
 
-<div class="profile-card reveal reveal-delay-5">
+      <!-- Profile 12: Yabu -->
+      <div class="profile-card reveal reveal-delay-3"
+           data-category="siblings"
+           data-name="Yabu"
+           data-role="The on time girl"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780307943/yabu_zalllb.jpg"
+           data-desc="She's always there on Time and the Archnemesis of Isru And SAV :)."
+           data-badge-label="Birthday"
+           data-badge-icon="🎂"
+           data-badge-text="December 23rd — “For God so loved the world, that he gave his only Son, that whoever believes in him should not perish...” — John 3:16"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Yabu">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-          
-<div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780307943/yabu_zalllb.jpg" alt=""
-     style="width:100%;height:100%;object-fit:cover;" />
-  <span class="profile-tag"></span>
-</div>
-          <!-- ====== ROLE TAG ====== -->
-          <span class="profile-tag">The on time girl</span>
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780307943/yabu_zalllb.jpg" alt="Yabu" loading="lazy" />
+          <span class="profile-tag">The On-Time Girl</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
           <h3 class="profile-name">Yabu</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="profile-desc">
-           She's always there on Time and the Archnemesis of Isru And SAV :).
+            She's always there on Time and the Archnemesis of Isru And SAV :).
           </p>
-          <!-- ====== BADGE ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
             <div>
               <span class="profile-badge-label">Birthday</span>
-              <span class="profile-badge-text"> December  23rd &mdash; "For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life." &mdash; John 3:16 </span>
+              <span class="profile-badge-text">December 23rd &mdash; &ldquo;For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life.&rdquo; &mdash; John 3:16</span>
             </div>
           </div>
         </div>
       </div>
-      <!-- ============================================================
-           PROFILE CARD 11 — ADD or REMOVE cards as needed
-           ============================================================ -->
 
-<div class="profile-card reveal reveal-delay-5">
+      <!-- Profile 13: Abrish -->
+      <div class="profile-card reveal reveal-delay-4"
+           data-category="siblings"
+           data-name="Abrish"
+           data-role="The Bible Sage"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780308993/abrish_ykoyhm.jpg"
+           data-desc="The family’s resident sage and anchor of faith. Our BS time is continuously blessed because of his deep knowledge of the word."
+           data-badge-label="Birthday"
+           data-badge-icon="🎂"
+           data-badge-text="October 12th — “Greater love has no one than this: to lay down one’s life for one’s friends.” — John 15:13"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Abrish">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-         
-<div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780308993/abrish_ykoyhm.jpg" alt=""
-     style="width:100%;height:100%;object-fit:cover;" />
-  <span class="profile-tag"></span>
-</div>
-          <!-- ====== ROLE TAG ====== -->
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780308993/abrish_ykoyhm.jpg" alt="Abrish" loading="lazy" />
           <span class="profile-tag">The Bible Sage</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
           <h3 class="profile-name">Abrish</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="profile-desc">
-           The family’s resident sage and anchor of faith.Our BS time is continuously blessed because of his deep knowledge of the word.
+            The family’s resident sage and anchor of faith. Our BS time is continuously blessed because of his deep knowledge of the word.
           </p>
-          <!-- ====== BADGE ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
             <div>
               <span class="profile-badge-label">Birthday</span>
-              <span class="profile-badge-text"> October  12th &mdash;Greater love has no one than this: to lay down one’s life for one’s friends.
-                Jhon 15:13   </span>
+              <span class="profile-badge-text">October 12th &mdash; &ldquo;Greater love has no one than this: to lay down one’s life for one’s friends.&rdquo; &mdash; John 15:13</span>
             </div>
           </div>
         </div>
       </div>
-      <!-- ============================================================
-           PROFILE CARD 12 — ADD or REMOVE cards as needed
-           ============================================================ -->
-      
-<div class="profile-card reveal reveal-delay-5">
+
+      <!-- Profile 14: Sami -->
+      <div class="profile-card reveal reveal-delay-5"
+           data-category="siblings"
+           data-name="Sami"
+           data-role="Prayer Warrior"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780332543/sam_okklks.jpg"
+           data-desc="A steadfast pillar of our prayer team, Sami carried our family with a shepherding heart and unwavering faith."
+           data-badge-label="Birthday"
+           data-badge-icon="🎂"
+           data-badge-text="December 13th — “Cast all your anxiety on him because he cares for you.” — 1 Peter 5:7"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Sami">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-          
-<div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780332543/sam_okklks.jpg" alt=""
-     style="width:100%;height:100%;object-fit:cover;" />
-  <span class="profile-tag"></span>
-</div>
-          <!-- ====== ROLE TAG ====== -->
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780332543/sam_okklks.jpg" alt="Sami" loading="lazy" />
           <span class="profile-tag">Prayer Warrior</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
           <h3 class="profile-name">Sami</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="profile-desc">
-          A steadfast pillar of our prayer team, Sami carried our family with a shepherding heart and unwavering faith.
-           
+            A steadfast pillar of our prayer team, Sami carried our family with a shepherding heart and unwavering faith.
           </p>
-          <!-- ====== BADGE ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
             <div>
               <span class="profile-badge-label">Birthday</span>
-              <span class="profile-badge-text"> December  13th &mdash;"Cast all your anxiety on him because he cares for you." &mdash; 1 Peter 5:7   </span>
+              <span class="profile-badge-text">December 13th &mdash; &ldquo;Cast all your anxiety on him because he cares for you.&rdquo; &mdash; 1 Peter 5:7</span>
             </div>
           </div>
         </div>
       </div>
 
-<div class="profile-card reveal reveal-delay-5">
+      <!-- Profile 15: Betisha -->
+      <div class="profile-card reveal reveal-delay-2"
+           data-category="siblings"
+           data-name="Betisha"
+           data-role="Another Bible Sage"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780332011/betisha_yhfclx.jpg"
+           data-desc="A faithful guide in scripture, Betisha helped open our eyes to the depth of God’s Word with wisdom and grace."
+           data-badge-label="Birthday"
+           data-badge-icon="🎂"
+           data-badge-text="September 27th — “The Lord is near to the brokenhearted and saves the crushed in spirit.” — Psalm 34:18"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Betisha">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-          
-<div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780332011/betisha_yhfclx.jpg" alt=""
-     style="width:100%;height:100%;object-fit:cover;object-position:top;" />
-  <span class="profile-tag"></span>
-</div>
-          <!-- ====== ROLE TAG ====== -->
-          <span class="profile-tag">Another Bible Sage</span>
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780332011/betisha_yhfclx.jpg" alt="Betisha" style="object-position:top;" loading="lazy" />
+          <span class="profile-tag">Bible Sage</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
           <h3 class="profile-name">Betisha</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="profile-desc">
-          A faithful guide in scripture, Betisha helped open our eyes to the depth of God’s Word with wisdom and grace.
-           
+            A faithful guide in scripture, Betisha helped open our eyes to the depth of God’s Word with wisdom and grace.
           </p>
-          <!-- ====== BADGE ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
             <div>
               <span class="profile-badge-label">Birthday</span>
-              <span class="profile-badge-text"> September  27th &mdash; "The Lord is near to the brokenhearted and saves the crushed in spirit." &mdash; Psalm 34:18   </span>
+              <span class="profile-badge-text">September 27th &mdash; &ldquo;The Lord is near to the brokenhearted and saves the crushed in spirit.&rdquo; &mdash; Psalm 34:18</span>
             </div>
           </div>
         </div>
       </div>
- <!-- ============================================================
-           PROFILE CARD 13 — ADD or REMOVE cards as needed
-           ============================================================ -->
 
-<div class="profile-card reveal reveal-delay-5">
+      <!-- Profile 16: Kira -->
+      <div class="profile-card reveal reveal-delay-3"
+           data-category="siblings"
+           data-name="Kira"
+           data-role="The innocent guy"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780307918/kira_d49zyo.jpg"
+           data-desc="Our Brother in Christ: he doesn't talk too much and too little — a very decent, dependable soul."
+           data-badge-label="Birthday"
+           data-badge-icon="🎂"
+           data-badge-text="September 20th — “Whatever you do, work heartily, as for the Lord and not for men.” — Colossians 3:23"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Kira">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-          
-<div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780307918/kira_d49zyo.jpg" alt=""
-     style="width:100%;height:100%;object-fit:cover;" />
-  <span class="profile-tag"></span>
-</div>
-          <!-- ====== ROLE TAG ====== -->
-          <span class="profile-tag">The inncocent guy</span>
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780307918/kira_d49zyo.jpg" alt="Kira" loading="lazy" />
+          <span class="profile-tag">Brother in Christ</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
           <h3 class="profile-name">Kira</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="profile-desc">
-          our Brother in Christ, he doesn't talk too much and too little. very decent guy.
-           
+            Our Brother in Christ: he doesn't talk too much and too little &mdash; a very decent, dependable soul.
           </p>
-          <!-- ====== BADGE ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
             <div>
               <span class="profile-badge-label">Birthday</span>
-              <span class="profile-badge-text"> September  20th &mdash;"Whatever you do, work heartily, as for the Lord and not for men." &mdash; Colossians 3:23  </span>
+              <span class="profile-badge-text">September 20th &mdash; &ldquo;Whatever you do, work heartily, as for the Lord and not for men.&rdquo; &mdash; Colossians 3:23</span>
             </div>
           </div>
         </div>
       </div>
-      <!-- ============================================================
-           PROFILE CARD 14 — ADD or REMOVE cards as needed
-           ============================================================ -->
 
-<div class="profile-card reveal reveal-delay-5">
+      <!-- Profile 17: Berkume -->
+      <div class="profile-card reveal reveal-delay-4"
+           data-category="siblings"
+           data-name="Berkume"
+           data-role="Our Short-Season Blessing"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780330997/berkume_tmidlh.jpg"
+           data-desc="Though her time with us was brief, Berkume was there at the very foundation of our team. We will always cherish the early spark she brought and the potential of what we began together."
+           data-badge-label="Birthday"
+           data-badge-icon="🎂"
+           data-badge-text="September 11th — “Jesus Christ is the same yesterday and today and forever.” — Hebrews 13:8"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Berkume">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-         <div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780330997/berkume_tmidlh.jpg" alt=""
-     style="width:100%;height:100%;object-fit:cover;object-position:top;" />
-  <span class="profile-tag"></span>
-</div>
-          <!-- ====== ROLE TAG ====== -->
-          <span class="profile-tag">Our Short-Season Blessing</span>
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780330997/berkume_tmidlh.jpg" alt="Berkume" style="object-position:top;" loading="lazy" />
+          <span class="profile-tag">Early Spark</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
           <h3 class="profile-name">Berkume</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="profile-desc">
-          Though her time with us was brief, Berkume was there at the very foundation of our team.
-           We will always cherish the early spark she brought and the potential of what we began together.
+            Though her time with us was brief, Berkume was there at the very foundation of our team.
+            We will always cherish the early spark she brought and the potential of what we began together.
           </p>
-          <!-- ====== BADGE ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F382;</span>
             <div>
               <span class="profile-badge-label">Birthday</span>
-              <span class="profile-badge-text"> September  11th &mdash; "Jesus Christ is the same yesterday and today and forever." &mdash; Hebrews 13:8    </span>
+              <span class="profile-badge-text">September 11th &mdash; &ldquo;Jesus Christ is the same yesterday and today and forever.&rdquo; &mdash; Hebrews 13:8</span>
             </div>
           </div>
         </div>
       </div>
 
-<!--profile for tame, eba, and moti-->
-      
-      
-<div class="profile-card reveal reveal-delay-5">
+      <!-- Profile 18: Moti -->
+      <div class="profile-card reveal reveal-delay-5"
+           data-category="siblings"
+           data-name="Moti"
+           data-role="Beloved son"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780330997/moti_ylcuhb.jpg"
+           data-desc="Gentle in spirit and steadfast in fellowship. A beloved brother whose quiet joy and dependable presence lift up everyone around him."
+           data-badge-label="Favorite Scripture"
+           data-badge-icon="📖"
+           data-badge-text="“The Lord is my shepherd; I shall not want.” — Psalm 23:1"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Moti">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-          <div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780330997/moti_ylcuhb.jpg" alt=""
-     style="width:100%;height:100%;object-fit:cover;object-position:top;" />
-  <span class="profile-tag"></span>
-</div>
-          <!-- ====== ROLE TAG ====== -->
-          <span class="profile-tag">Beloved son</span>
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780330997/moti_ylcuhb.jpg" alt="Moti" style="object-position:top;" loading="lazy" />
+          <span class="profile-tag">Beloved Son</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
           <h3 class="profile-name">Moti</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="profile-desc">
-          
+            Gentle in spirit and steadfast in fellowship. A beloved brother whose quiet joy and dependable presence lift up everyone around him.
           </p>
-          <!-- ====== BADGE ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F4D6;</span>
             <div>
               <span class="profile-badge-label">Favorite Scripture</span>
-              <span class="profile-badge-text"> "The Lord is my shepherd; I shall not want." &mdash; Psalm 23:1  </span>
+              <span class="profile-badge-text">&ldquo;The Lord is my shepherd; I shall not want.&rdquo; &mdash; Psalm 23:1</span>
             </div>
           </div>
         </div>
       </div>
-<!--profile 16====-->
 
-<div class="profile-card reveal reveal-delay-5">
+      <!-- Profile 19: Eba -->
+      <div class="profile-card reveal reveal-delay-2"
+           data-category="siblings"
+           data-name="Eba"
+           data-role="Beloved son"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780331001/eba_b7aitb.jpg"
+           data-desc="Full of heart and genuine courage. Always ready with a warm smile, bringing sincerity and brotherly love to every family gathering."
+           data-badge-label="Favorite Scripture"
+           data-badge-icon="📖"
+           data-badge-text="“When I am afraid, I put my trust in you.” — Psalm 56:3"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Eba">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-         <div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780331001/eba_b7aitb.jpg" alt=""
-      style="width:100%;height:100%;object-fit:cover;object-position:top;" />
-  <span class="profile-tag"></span>
-</div>
-          <!-- ====== ROLE TAG ====== -->
-          <span class="profile-tag">Beloved son</span>
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780331001/eba_b7aitb.jpg" alt="Eba" style="object-position:top;" loading="lazy" />
+          <span class="profile-tag">Beloved Son</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
           <h3 class="profile-name">Eba</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="profile-desc">
-          
+            Full of heart and genuine courage. Always ready with a warm smile, bringing sincerity and brotherly love to every family gathering.
           </p>
-          <!-- ====== BADGE ====== -->
-          <div class="profile-badge">
-            <span class="profile-badge-icon" aria-hidden="true">&#x1F4D6;</span>
-            <div>
-              <span class="profile-badge-label">favorite scripture</span>
-              <span class="profile-badge-text"> "When I am afraid, I put my trust in you." &mdash; Psalm 56:3   </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--profile 17-->
-
-<div class="profile-card reveal reveal-delay-5">
-        <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-          <div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780331001/tame_rdmoib.jpg" alt=""
-     style="width:100%;height:100%;object-fit:cover;" />
-  <span class="profile-tag"></span>
-</div>
-          <!-- ====== ROLE TAG ====== -->
-          <span class="profile-tag">Beloved son</span>
-        </div>
-        <div class="profile-body">
-          <!-- ====== NAME ====== -->
-          <h3 class="profile-name">Tame</h3>
-          <!-- ====== DESCRIPTION ====== -->
-          <p class="profile-desc">
-          
-          </p>
-          <!-- ====== BADGE ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F4D6;</span>
             <div>
               <span class="profile-badge-label">Favorite Scripture</span>
-              <span class="profile-badge-text">"The Lord is my light and my salvation; whom shall I fear?" &mdash; Psalm 27:1   </span>
+              <span class="profile-badge-text">&ldquo;When I am afraid, I put my trust in you.&rdquo; &mdash; Psalm 56:3</span>
             </div>
           </div>
         </div>
       </div>
 
-
-      <!--the last profile-->
-      <div class="profile-card reveal reveal-delay-5">
+      <!-- Profile 20: Tame -->
+      <div class="profile-card reveal reveal-delay-3"
+           data-category="siblings"
+           data-name="Tame"
+           data-role="Beloved son"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780331001/tame_rdmoib.jpg"
+           data-desc="A shining soul with a deep, faithful heart. Walking in confidence and grace, he brings peace and strength wherever he goes."
+           data-badge-label="Favorite Scripture"
+           data-badge-icon="📖"
+           data-badge-text="“The Lord is my light and my salvation; whom shall I fear?” — Psalm 27:1"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Tame">
         <div class="profile-photo">
-          <!-- ====== REPLACE WITH PHOTO ====== -->
-          <div class="profile-photo">
-  <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780332017/asibegn_pvpzug.jpg" alt=""
-     style="width:100%;height:100%;object-fit:cover;object-position:top;" />
-  <span class="profile-tag"></span>
-</div>
-          <!-- ====== ROLE TAG ====== -->
-          <span class="profile-tag">Beloved son</span>
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780331001/tame_rdmoib.jpg" alt="Tame" loading="lazy" />
+          <span class="profile-tag">Beloved Son</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
         </div>
         <div class="profile-body">
-          <!-- ====== NAME ====== -->
-          <h3 class="profile-name">Asibegn</h3>
-          <!-- ====== DESCRIPTION ====== -->
+          <h3 class="profile-name">Tame</h3>
           <p class="profile-desc">
-          
+            A shining soul with a deep, faithful heart. Walking in confidence and grace, he brings peace and strength wherever he goes.
           </p>
-          <!-- ====== BADGE ====== -->
           <div class="profile-badge">
             <span class="profile-badge-icon" aria-hidden="true">&#x1F4D6;</span>
             <div>
-              <span class="profile-badge-label">Favorite scripture</span>
-              <span class="profile-badge-text">"We love because he first loved us." &mdash;1 John 4:19   </span>
+              <span class="profile-badge-label">Favorite Scripture</span>
+              <span class="profile-badge-text">&ldquo;The Lord is my light and my salvation; whom shall I fear?&rdquo; &mdash; Psalm 27:1</span>
             </div>
           </div>
         </div>
       </div>
 
-
+      <!-- Profile 21: Asibegn -->
+      <div class="profile-card reveal reveal-delay-4"
+           data-category="siblings"
+           data-name="Asibegn"
+           data-role="Beloved son"
+           data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780332017/asibegn_pvpzug.jpg"
+           data-desc="A living reminder of unconditional love and patience. His presence in our family fellowship is a constant blessing and source of gratitude."
+           data-badge-label="Favorite Scripture"
+           data-badge-icon="📖"
+           data-badge-text="“We love because he first loved us.” — 1 John 4:19"
+           tabindex="0"
+           role="button"
+           aria-label="View details for Asibegn">
+        <div class="profile-photo">
+          <img src="https://res.cloudinary.com/dknulflaz/image/upload/v1780332017/asibegn_pvpzug.jpg" alt="Asibegn" style="object-position:top;" loading="lazy" />
+          <span class="profile-tag">Beloved Son</span>
+          <span class="profile-zoom-icon" aria-hidden="true">&#x2922;</span>
+        </div>
+        <div class="profile-body">
+          <h3 class="profile-name">Asibegn</h3>
+          <p class="profile-desc">
+            A living reminder of unconditional love and patience. His presence in our family fellowship is a constant blessing and source of gratitude.
+          </p>
+          <div class="profile-badge">
+            <span class="profile-badge-icon" aria-hidden="true">&#x1F4D6;</span>
+            <div>
+              <span class="profile-badge-label">Favorite Scripture</span>
+              <span class="profile-badge-text">&ldquo;We love because he first loved us.&rdquo; &mdash; 1 John 4:19</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div><!-- /profiles-grid -->
   </section>
@@ -1712,21 +2379,20 @@
 
       <!-- ============================================================
            TIMELINE ITEM 1
-           HOW TO ADD A PHOTO to .tl-photo:
-             Add style="background-image:url('YOUR-PHOTO-URL.jpg');
-                        background-size:cover;background-position:center;"
-             to the .tl-photo div, then delete the .tl-photo-placeholder.
            ============================================================ -->
       <div class="timeline-item reveal" role="listitem">
-
         <!-- Left cell: photo -->
         <div class="tl-left">
-          <!-- ====== TIMELINE PHOTO — replace background-image with your URL ====== -->
           <div class="tl-photo"
-     style="background-image:url('https://res.cloudinary.com/dknulflaz/image/upload/v1780308995/first_meetup_lizoln.jpg');
-            background-size:cover;
-            background-position:center;">
-</div>
+               style="background-image:url('https://res.cloudinary.com/dknulflaz/image/upload/v1780308995/first_meetup_lizoln.jpg'); background-size:cover; background-position:center;"
+               data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780308995/first_meetup_lizoln.jpg"
+               data-title="First Family meetup"
+               data-tag="October 2025"
+               data-desc="There was an exciting nervous energy in the room. We all looked around the circle realizing we're gonna spend the next 4 or 5 years together."
+               role="button"
+               tabindex="0"
+               aria-label="View photo for First Family meetup">
+          </div>
         </div>
 
         <!-- Centre node -->
@@ -1734,14 +2400,11 @@
 
         <!-- Right cell: text -->
         <div class="tl-right">
-          <!-- ====== DATE ====== -->
           <span class="tl-date">October 2025</span>
-          <!-- ====== HEADLINE ====== -->
           <h3 class="tl-headline">First Family meetup</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="tl-text">
-           There was an exciting nervous energy in the room. we all look around the circle realizing
-           we're gonna spend the next 4 or 5 years together.
+            There was an exciting nervous energy in the room. We all looked around the circle realizing
+            we're gonna spend the next 4 or 5 years together.
           </p>
         </div>
       </div>
@@ -1750,14 +2413,17 @@
            TIMELINE ITEM 2
            ============================================================ -->
       <div class="timeline-item reveal reveal-delay-1" role="listitem">
-
         <!-- Left cell: photo -->
         <div class="tl-left">
           <div class="tl-photo"
-               style="background-image:url('https://res.cloudinary.com/dknulflaz/image/upload/v1780308994/first_dinner_fccl23.jpg');
-                      background-size:cover;
-                      background-position:center;
-                      margin-left:auto;">
+               style="background-image:url('https://res.cloudinary.com/dknulflaz/image/upload/v1780308994/first_dinner_fccl23.jpg'); background-size:cover; background-position:center; margin-left:auto;"
+               data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780308994/first_dinner_fccl23.jpg"
+               data-title="The first Family dinner"
+               data-tag="October 2025"
+               data-desc="The table was full of laughter, good food, and the unmistakable feeling that this was the beginning of something God-ordained."
+               role="button"
+               tabindex="0"
+               aria-label="View photo for The first Family dinner">
           </div>
         </div>
 
@@ -1773,21 +2439,23 @@
           </p>
         </div>
       </div>
-      </div>
 
       <!-- ============================================================
            TIMELINE ITEM 3
            ============================================================ -->
       <div class="timeline-item reveal reveal-delay-2" role="listitem">
-
         <!-- Left cell: photo -->
         <div class="tl-left">
-          <!-- ====== TIMELINE PHOTO ====== -->
           <div class="tl-photo"
-     style="background-image:url('https://res.cloudinary.com/dknulflaz/image/upload/v1780308993/mini_mission_cnn5mo.jpg');
-            background-size:cover;
-            background-position:center;">
-</div>
+               style="background-image:url('https://res.cloudinary.com/dknulflaz/image/upload/v1780308993/mini_mission_cnn5mo.jpg'); background-size:cover; background-position:center;"
+               data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780308993/mini_mission_cnn5mo.jpg"
+               data-title="Our first mini-mission"
+               data-tag="November 2025"
+               data-desc="We bundled up, sang off-key, and served together at the church’s outreach. We were only 3 :)"
+               role="button"
+               tabindex="0"
+               aria-label="View photo for Our first mini-mission">
+          </div>
         </div>
 
         <!-- Centre node -->
@@ -1795,15 +2463,11 @@
 
         <!-- Right cell: text -->
         <div class="tl-right">
-          <!-- ====== DATE ====== -->
           <span class="tl-date">November 2025</span>
-          <!-- ====== HEADLINE ====== -->
           <h3 class="tl-headline">Our first mini-mission</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="tl-text">
             We bundled up, sang off-key, and served together at the church&rsquo;s 
             outreach. We were only 3 :)
-        
           </p>
         </div>
       </div>
@@ -1812,14 +2476,17 @@
            TIMELINE ITEM 4
            ============================================================ -->
       <div class="timeline-item reveal reveal-delay-3" role="listitem">
-
         <!-- Left cell: photo -->
         <div class="tl-left">
           <div class="tl-photo"
-               style="background-image:url('https://res.cloudinary.com/dknulflaz/image/upload/v1780309000/second_semester_meetup_w8iaga.jpg');
-                      background-size:cover;
-                      background-position:center;
-                      margin-left:auto;">
+               style="background-image:url('https://res.cloudinary.com/dknulflaz/image/upload/v1780309000/second_semester_meetup_w8iaga.jpg'); background-size:cover; background-position:center; margin-left:auto;"
+               data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780309000/second_semester_meetup_w8iaga.jpg"
+               data-title="The first Dinner of Second semester"
+               data-tag="March 2026"
+               data-desc="After getting back from semester break this was our first dinner."
+               role="button"
+               tabindex="0"
+               aria-label="View photo for The first Dinner of Second semester">
           </div>
         </div>
 
@@ -1835,21 +2502,23 @@
           </p>
         </div>
       </div>
-      </div>
 
       <!-- ============================================================
            TIMELINE ITEM 5
            ============================================================ -->
       <div class="timeline-item reveal reveal-delay-4" role="listitem">
-
         <!-- Left cell: photo -->
         <div class="tl-left">
-          <!-- ====== TIMELINE PHOTO ====== -->
           <div class="tl-photo"
-     style="background-image:url('https://res.cloudinary.com/dknulflaz/image/upload/v1780308998/goodbye_xconzm.jpg');
-            background-size:cover;
-            background-position:center;">
-</div>
+               style="background-image:url('https://res.cloudinary.com/dknulflaz/image/upload/v1780308998/goodbye_xconzm.jpg'); background-size:cover; background-position:center;"
+               data-img="https://res.cloudinary.com/dknulflaz/image/upload/v1780308998/goodbye_xconzm.jpg"
+               data-title="Breakthrough Moments &amp; End-of-Year Celebration"
+               data-tag="May 2026"
+               data-desc="Looking back at all God moved in a single year: answered prayers, opened doors, and one family that became an extension of our own. We celebrated not just the milestones but the small, daily miracle of belonging to each other."
+               role="button"
+               tabindex="0"
+               aria-label="View photo for Breakthrough Moments & End-of-Year Celebration">
+          </div>
         </div>
 
         <!-- Centre node -->
@@ -1857,11 +2526,8 @@
 
         <!-- Right cell: text -->
         <div class="tl-right">
-          <!-- ====== DATE ====== -->
           <span class="tl-date">May 2026</span>
-          <!-- ====== HEADLINE ====== -->
           <h3 class="tl-headline">Breakthrough Moments &amp; End-of-Year Celebration</h3>
-          <!-- ====== DESCRIPTION ====== -->
           <p class="tl-text">
             Looking back at all God moved in a single year: answered prayers, opened doors, 
             and one family that became an extension of our own. We celebrated not just the 
@@ -1890,9 +2556,14 @@
         Prayers answered, promises held, and blessings spoken over this family &mdash; 
         gathered here as a testament to God&rsquo;s faithfulness.
       </p>
+      <div class="gratitude-header-action reveal reveal-delay-3">
+        <button type="button" class="btn-blessing" id="open-blessing-btn">
+          <span aria-hidden="true">&#x2728;</span> Leave a Blessing or Prayer
+        </button>
+      </div>
     </div>
 
-    <div class="gratitude-grid">
+    <div class="gratitude-grid" id="gratitude-grid">
 
       <!-- ============================================================
            GRATITUDE CARD 1 — FEATURED (spans 2 cols on desktop)
@@ -2017,59 +2688,546 @@
 
 
   <!-- ================================================================
-       JAVASCRIPT — Nav scroll behaviour + reveal animations + mobile menu
+       PHOTO / MEMBER LIGHTBOX DIALOG (<dialog>)
+       ================================================================ -->
+  <dialog id="photo-lightbox" class="editorial-modal" aria-labelledby="modal-title" aria-modal="true">
+    <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">&#x2715;</button>
+    <div class="modal-content-grid">
+      <div class="modal-photo-col">
+        <img id="modal-img" src="" alt="" />
+      </div>
+      <div class="modal-info-col">
+        <span class="modal-tag" id="modal-tag"></span>
+        <h2 class="modal-title" id="modal-title"></h2>
+        <p class="modal-desc" id="modal-desc"></p>
+        <div class="modal-badge" id="modal-badge-container">
+          <span class="modal-badge-icon" id="modal-badge-icon" aria-hidden="true">&#x1F382;</span>
+          <div>
+            <span class="modal-badge-label" id="modal-badge-label"></span>
+            <span class="modal-badge-text" id="modal-badge-text"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+
+  <!-- ================================================================
+       LEAVE A BLESSING DIALOG (<dialog>)
+       ================================================================ -->
+  <dialog id="blessing-modal" aria-labelledby="blessing-form-title" aria-modal="true">
+    <div class="blessing-form-container">
+      <button type="button" class="modal-close-btn" id="blessing-close-btn" aria-label="Close dialog">&#x2715;</button>
+      <h3 id="blessing-form-title">Share a Blessing or Prayer</h3>
+      <p>Write an encouraging thought, memory, or prayer to preserve in this digital book.</p>
+      
+      <form id="blessing-form">
+        <div class="form-group">
+          <label for="blessing-author">Your Name / From</label>
+          <input type="text" id="blessing-author" placeholder="e.g. Family Member, Friend" required autocomplete="name" />
+        </div>
+        
+        <div class="form-group">
+          <label for="blessing-tag">Category</label>
+          <select id="blessing-tag">
+            <option value="Blessing">Blessing</option>
+            <option value="Answered Prayer">Answered Prayer</option>
+            <option value="Encouragement">Encouragement</option>
+            <option value="Scripture">Scripture</option>
+            <option value="Memory">Family Memory</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="blessing-text">Your Words</label>
+          <textarea id="blessing-text" placeholder="Speak love, gratitude, or a promise from God..." required></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn-cancel" id="blessing-cancel-btn">Cancel</button>
+          <button type="submit" class="btn-submit">Add to Wall</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+
+  <!-- ================================================================
+       FLOATING BACK TO TOP BUTTON
+       ================================================================ -->
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Scroll back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+
+  <!-- ================================================================
+       JAVASCRIPT — Navigation, Search/Filter, Lightbox & Guestbook
        ================================================================ -->
   <script>
-    /* ── Sticky nav: add .scrolled class after 40px scroll ── */
-    const mainNav = document.getElementById('main-nav');
-    window.addEventListener('scroll', function () {
-      mainNav.classList.toggle('scrolled', window.scrollY > 40);
-    }, { passive: true });
+    (function () {
+      'use strict';
 
-    /* ── Intersection Observer: fade-in on scroll for .reveal elements ── */
-    var revealElements = document.querySelectorAll('.reveal');
-    var revealObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
+      /* ── 1. Sticky nav + Reading Progress Bar ── */
+      const mainNav = document.getElementById('main-nav');
+      const readingProgress = document.getElementById('reading-progress');
+      const backToTop = document.getElementById('back-to-top');
+
+      function onScroll() {
+        const scrollY = window.scrollY;
+        // Sticky nav
+        if (mainNav) {
+          mainNav.classList.toggle('scrolled', scrollY > 40);
+        }
+
+        // Reading progress indicator
+        if (readingProgress) {
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const progressPercent = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+          readingProgress.style.width = Math.min(100, Math.max(0, progressPercent)) + '%';
+        }
+
+        // Back to top button
+        if (backToTop) {
+          backToTop.classList.toggle('visible', scrollY > 360);
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      if (backToTop) {
+        backToTop.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      /* ── 2. Scroll Spy for Nav Links ── */
+      const sections = document.querySelectorAll('section[id], header[id]');
+      const navLinks = document.querySelectorAll('.nav-links a');
+
+      const sectionObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(function (link) {
+              const href = link.getAttribute('href');
+              if (href === '#' + id) {
+                link.classList.add('active');
+              } else {
+                link.classList.remove('active');
+              }
+            });
+          }
+        });
+      }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(function (section) {
+        sectionObserver.observe(section);
+      });
+
+      /* ── 3. Scroll Reveal Animations ── */
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      revealElements.forEach(function (el) {
+        revealObserver.observe(el);
+      });
+
+      /* ── 4. Mobile Navigation ── */
+      const navToggle   = document.getElementById('nav-toggle');
+      const navMobile   = document.getElementById('nav-mobile');
+      const navClose    = document.getElementById('nav-mobile-close');
+      const mobileLinks = document.querySelectorAll('.nav-mobile-link');
+
+      function openMobileNav () {
+        if (!navMobile) return;
+        navMobile.classList.add('open');
+        navToggle && navToggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeMobileNav () {
+        if (!navMobile) return;
+        navMobile.classList.remove('open');
+        navToggle && navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      if (navToggle) navToggle.addEventListener('click', openMobileNav);
+      if (navClose)  navClose.addEventListener('click', closeMobileNav);
+      mobileLinks.forEach(function (link) {
+        link.addEventListener('click', closeMobileNav);
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && navMobile && navMobile.classList.contains('open')) {
+          closeMobileNav();
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-    revealElements.forEach(function (el) {
-      revealObserver.observe(el);
-    });
+      /* ── 5. Profile Filter & Real-Time Search ── */
+      const filterChips      = document.querySelectorAll('.filter-chip');
+      const searchInput      = document.getElementById('profile-search');
+      const searchClearBtn   = document.getElementById('profile-search-clear');
+      const filterCount      = document.getElementById('filter-count');
+      const profilesEmpty    = document.getElementById('profiles-empty');
+      const resetFilterBtn   = document.getElementById('btn-reset-filter');
+      const profileCards     = document.querySelectorAll('.profiles-grid .profile-card');
 
-    /* ── Mobile navigation toggle ── */
-    var navToggle   = document.getElementById('nav-toggle');
-    var navMobile   = document.getElementById('nav-mobile');
-    var navClose    = document.getElementById('nav-mobile-close');
-    var mobileLinks = document.querySelectorAll('.nav-mobile-link');
+      let currentCategory = 'all';
+      let currentQuery    = '';
 
-    function openMobileNav () {
-      navMobile.classList.add('open');
-      navToggle.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeMobileNav () {
-      navMobile.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
+      function applyProfileFilters() {
+        let visibleCount = 0;
+        const queryLower = currentQuery.toLowerCase().trim();
 
-    navToggle.addEventListener('click', openMobileNav);
-    navClose.addEventListener('click', closeMobileNav);
-    mobileLinks.forEach(function (link) {
-      link.addEventListener('click', closeMobileNav);
-    });
+        profileCards.forEach(function (card) {
+          const category = card.getAttribute('data-category') || '';
+          const name     = (card.getAttribute('data-name') || '').toLowerCase();
+          const role     = (card.getAttribute('data-role') || '').toLowerCase();
+          const desc     = (card.getAttribute('data-desc') || '').toLowerCase();
+          const badge    = (card.getAttribute('data-badge-text') || '').toLowerCase();
 
-    /* Close mobile nav on Escape key */
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && navMobile.classList.contains('open')) {
-        closeMobileNav();
+          const matchesCategory = (currentCategory === 'all' || category === currentCategory);
+          const matchesQuery    = !queryLower || 
+            name.includes(queryLower) || 
+            role.includes(queryLower) || 
+            desc.includes(queryLower) || 
+            badge.includes(queryLower);
+
+          if (matchesCategory && matchesQuery) {
+            card.style.display = '';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Update count indicator
+        if (filterCount) {
+          if (visibleCount === profileCards.length) {
+            filterCount.textContent = 'Showing all ' + visibleCount + ' family members';
+          } else {
+            filterCount.textContent = 'Showing ' + visibleCount + ' of ' + profileCards.length + ' family members';
+          }
+        }
+
+        // Show/hide empty state
+        if (profilesEmpty) {
+          profilesEmpty.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        // Toggle clear search button
+        if (searchClearBtn) {
+          searchClearBtn.style.display = currentQuery.length > 0 ? 'block' : 'none';
+        }
       }
-    });
+
+      // Filter chip clicks
+      filterChips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          filterChips.forEach(function (c) {
+            c.classList.remove('active');
+            c.setAttribute('aria-selected', 'false');
+          });
+          chip.classList.add('active');
+          chip.setAttribute('aria-selected', 'true');
+          currentCategory = chip.getAttribute('data-filter') || 'all';
+          applyProfileFilters();
+        });
+      });
+
+      // Search input handler
+      if (searchInput) {
+        searchInput.addEventListener('input', function (e) {
+          currentQuery = e.target.value;
+          applyProfileFilters();
+        });
+      }
+
+      // Search clear button
+      if (searchClearBtn) {
+        searchClearBtn.addEventListener('click', function () {
+          if (searchInput) {
+            searchInput.value = '';
+            searchInput.focus();
+          }
+          currentQuery = '';
+          applyProfileFilters();
+        });
+      }
+
+      // Reset filters button
+      if (resetFilterBtn) {
+        resetFilterBtn.addEventListener('click', function () {
+          currentCategory = 'all';
+          currentQuery = '';
+          if (searchInput) searchInput.value = '';
+          filterChips.forEach(function (chip) {
+            const isAll = chip.getAttribute('data-filter') === 'all';
+            chip.classList.toggle('active', isAll);
+            chip.setAttribute('aria-selected', isAll ? 'true' : 'false');
+          });
+          applyProfileFilters();
+        });
+      }
+
+      /* ── 6. Photo Lightbox Modal (<dialog>) ── */
+      const lightboxModal       = document.getElementById('photo-lightbox');
+      const modalCloseBtn       = document.getElementById('modal-close-btn');
+      const modalImg            = document.getElementById('modal-img');
+      const modalTag            = document.getElementById('modal-tag');
+      const modalTitle          = document.getElementById('modal-title');
+      const modalDesc           = document.getElementById('modal-desc');
+      const modalBadgeContainer = document.getElementById('modal-badge-container');
+      const modalBadgeIcon      = document.getElementById('modal-badge-icon');
+      const modalBadgeLabel     = document.getElementById('modal-badge-label');
+      const modalBadgeText      = document.getElementById('modal-badge-text');
+
+      function openLightbox(data) {
+        if (!lightboxModal) return;
+
+        modalImg.src = data.img || '';
+        modalImg.alt = data.title || '';
+        modalTag.textContent = data.tag || '';
+        modalTitle.textContent = data.title || '';
+        modalDesc.textContent = data.desc || '';
+
+        if (data.badgeText) {
+          modalBadgeContainer.style.display = 'flex';
+          modalBadgeIcon.textContent = data.badgeIcon || '✨';
+          modalBadgeLabel.textContent = data.badgeLabel || '';
+          modalBadgeText.textContent = data.badgeText || '';
+        } else {
+          modalBadgeContainer.style.display = 'none';
+        }
+
+        if (typeof lightboxModal.showModal === 'function') {
+          lightboxModal.showModal();
+        } else {
+          lightboxModal.setAttribute('open', '');
+        }
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        if (!lightboxModal) return;
+        if (typeof lightboxModal.close === 'function') {
+          lightboxModal.close();
+        } else {
+          lightboxModal.removeAttribute('open');
+        }
+        document.body.style.overflow = '';
+      }
+
+      if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', closeLightbox);
+      }
+
+      // Backdrop click dismiss for dialog
+      if (lightboxModal) {
+        lightboxModal.addEventListener('click', function (e) {
+          if (e.target === lightboxModal) {
+            closeLightbox();
+          }
+        });
+      }
+
+      // Attach click to profile cards
+      profileCards.forEach(function (card) {
+        function handleCardClick() {
+          openLightbox({
+            img:        card.getAttribute('data-img'),
+            tag:        card.getAttribute('data-role'),
+            title:      card.getAttribute('data-name'),
+            desc:       card.getAttribute('data-desc'),
+            badgeIcon:  card.getAttribute('data-badge-icon'),
+            badgeLabel: card.getAttribute('data-badge-label'),
+            badgeText:  card.getAttribute('data-badge-text')
+          });
+        }
+        card.addEventListener('click', handleCardClick);
+        card.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleCardClick();
+          }
+        });
+      });
+
+      // Attach click to timeline photos
+      const tlPhotos = document.querySelectorAll('.tl-photo');
+      tlPhotos.forEach(function (photo) {
+        function handlePhotoClick() {
+          openLightbox({
+            img:   photo.getAttribute('data-img'),
+            tag:   photo.getAttribute('data-tag'),
+            title: photo.getAttribute('data-title'),
+            desc:  photo.getAttribute('data-desc')
+          });
+        }
+        photo.addEventListener('click', handlePhotoClick);
+        photo.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handlePhotoClick();
+          }
+        });
+      });
+
+      /* ── 7. Gratitude Wall: Leave a Blessing (LocalStorage) ── */
+      const blessingModal    = document.getElementById('blessing-modal');
+      const openBlessingBtn  = document.getElementById('open-blessing-btn');
+      const blessingCloseBtn = document.getElementById('blessing-close-btn');
+      const blessingCancelBtn= document.getElementById('blessing-cancel-btn');
+      const blessingForm     = document.getElementById('blessing-form');
+      const gratitudeGrid    = document.getElementById('gratitude-grid');
+
+      const STORAGE_KEY = 'family_memory_book_blessings';
+
+      function openBlessingModal() {
+        if (!blessingModal) return;
+        if (typeof blessingModal.showModal === 'function') {
+          blessingModal.showModal();
+        } else {
+          blessingModal.setAttribute('open', '');
+        }
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeBlessingModal() {
+        if (!blessingModal) return;
+        if (typeof blessingModal.close === 'function') {
+          blessingModal.close();
+        } else {
+          blessingModal.removeAttribute('open');
+        }
+        document.body.style.overflow = '';
+      }
+
+      if (openBlessingBtn)   openBlessingBtn.addEventListener('click', openBlessingModal);
+      if (blessingCloseBtn)  blessingCloseBtn.addEventListener('click', closeBlessingModal);
+      if (blessingCancelBtn) blessingCancelBtn.addEventListener('click', closeBlessingModal);
+
+      if (blessingModal) {
+        blessingModal.addEventListener('click', function (e) {
+          if (e.target === blessingModal) {
+            closeBlessingModal();
+          }
+        });
+      }
+
+      function getSavedBlessings() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          return raw ? JSON.parse(raw) : [];
+        } catch (err) {
+          console.warn('Could not read from localStorage', err);
+          return [];
+        }
+      }
+
+      function saveBlessings(list) {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+        } catch (err) {
+          console.warn('Could not save to localStorage', err);
+        }
+      }
+
+      function renderCustomBlessingCard(item, index) {
+        const card = document.createElement('div');
+        card.className = 'gratitude-card reveal visible';
+        card.setAttribute('data-custom-index', index);
+
+        const iconMap = {
+          'Blessing': '✨',
+          'Answered Prayer': '🙏',
+          'Encouragement': '💛',
+          'Scripture': '📖',
+          'Memory': '🌱'
+        };
+        const icon = iconMap[item.tag] || '✨';
+
+        card.innerHTML = 
+          '<span class="gratitude-tag">' + escapeHtml(item.tag) + '</span>' +
+          '<div class="gratitude-card-type">' +
+            '<div class="gratitude-card-type-icon" aria-hidden="true">' + icon + '</div>' +
+            '<span class="gratitude-card-type-label">' + escapeHtml(item.tag) + '</span>' +
+          '</div>' +
+          '<div class="gratitude-card-quote-mark" aria-hidden="true">&ldquo;</div>' +
+          '<p class="gratitude-card-text">' + escapeHtml(item.text) + '</p>' +
+          '<p class="gratitude-card-author">From <strong>' + escapeHtml(item.author) + '</strong> &mdash; <time>' + escapeHtml(item.date) + '</time></p>' +
+          '<button type="button" class="gratitude-delete-btn" aria-label="Delete this message" title="Delete this entry">✕ Remove</button>';
+
+        const deleteBtn = card.querySelector('.gratitude-delete-btn');
+        if (deleteBtn) {
+          deleteBtn.addEventListener('click', function () {
+            const list = getSavedBlessings();
+            list.splice(index, 1);
+            saveBlessings(list);
+            loadAndRenderBlessings();
+          });
+        }
+
+        return card;
+      }
+
+      function loadAndRenderBlessings() {
+        if (!gratitudeGrid) return;
+        // Remove existing dynamic cards
+        const existingCustom = gratitudeGrid.querySelectorAll('.gratitude-card[data-custom-index]');
+        existingCustom.forEach(function (el) { el.remove(); });
+
+        const blessings = getSavedBlessings();
+        blessings.forEach(function (item, idx) {
+          const card = renderCustomBlessingCard(item, idx);
+          gratitudeGrid.appendChild(card);
+        });
+      }
+
+      function escapeHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str || '';
+        return div.innerHTML;
+      }
+
+      if (blessingForm) {
+        blessingForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const authorInput = document.getElementById('blessing-author');
+          const tagSelect   = document.getElementById('blessing-tag');
+          const textInput   = document.getElementById('blessing-text');
+
+          const newBlessing = {
+            author: authorInput.value.trim(),
+            tag:    tagSelect.value,
+            text:   textInput.value.trim(),
+            date:   new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+          };
+
+          const list = getSavedBlessings();
+          list.push(newBlessing);
+          saveBlessings(list);
+
+          blessingForm.reset();
+          closeBlessingModal();
+          loadAndRenderBlessings();
+        });
+      }
+
+      // Initial load of custom blessings
+      loadAndRenderBlessings();
+
+    })();
   </script>
 
 </body>
